@@ -5,7 +5,7 @@ import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../model/mt_doctor_model.dart';
-import 'mt_book_appoinment.dart';
+import 'Book Appoinment/mt_book_appoinment.dart';
 
 class DoctorDetailsScreen extends StatefulWidget {
   const DoctorDetailsScreen({Key? key}) : super(key: key);
@@ -139,7 +139,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                       ],
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 18,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -242,7 +242,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 24,
               ),
               Container(
                 decoration: BoxDecoration(
@@ -261,18 +261,21 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         style: ktitleTextStyle,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 12,
                       ),
                       Text(
                         biography,
                         style: ksubTitleTextStyle,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 24,
                       ),
                       Text(
                         "Gallery",
                         style: ktitleTextStyle,
+                      ),
+                      SizedBox(
+                        height: 12,
                       ),
                       HorizontalList(
                         itemCount: galleryImages.length,
@@ -288,21 +291,21 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         },
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 24,
                       ),
                       Text(
                         "Availability",
                         style: ktitleTextStyle,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 12,
                       ),
                       Text(
                         "Mon - Fri 09.00 AM - 08.00 PM",
                         style: ksubTitleTextStyle,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 24,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -328,6 +331,9 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                             ],
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 12,
                       ),
                       ListView.builder(
                         shrinkWrap: true,

@@ -77,6 +77,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                     decoration: InputDecoration(
                         label: Text("Full Name"),
                         labelStyle: TextStyle(color: kTittleColor),
+                        hintText: "Enter your full name",
                         hintStyle: TextStyle(color: kSubTittleColor),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         border: OutlineInputBorder(
@@ -90,6 +91,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                     decoration: InputDecoration(
                         label: Text("Phone Number"),
                         labelStyle: TextStyle(color: kTittleColor),
+                        hintText: "Enter your phone number",
                         hintStyle: TextStyle(color: kSubTittleColor),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         border: OutlineInputBorder(
@@ -103,6 +105,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                     decoration: InputDecoration(
                         label: Text("Email (optional)"),
                         labelStyle: TextStyle(color: kTittleColor),
+                        hintText: "Enter your email",
                         hintStyle: TextStyle(color: kSubTittleColor),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         border: OutlineInputBorder(
@@ -136,6 +139,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                           decoration: InputDecoration(
                               label: const Text("Gender"),
                               labelStyle: TextStyle(color: kTittleColor),
+                              hintText: "Select gender",
                               hintStyle: TextStyle(color: kSubTittleColor),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               border: OutlineInputBorder(
@@ -168,6 +172,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                           decoration: InputDecoration(
                               label: Text("Age"),
                               labelStyle: TextStyle(color: kTittleColor),
+                              hintText: "Select age",
                               hintStyle: TextStyle(color: kSubTittleColor),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               border: OutlineInputBorder(
@@ -184,6 +189,7 @@ class _PatientsDetailsScreenState extends State<PatientsDetailsScreen> {
                     decoration: InputDecoration(
                         label: Text("Write Your Problem"),
                         labelStyle: TextStyle(color: kTittleColor),
+                        hintText: "Tell doctor about your problem",
                         hintStyle: TextStyle(color: kSubTittleColor),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         border: OutlineInputBorder(

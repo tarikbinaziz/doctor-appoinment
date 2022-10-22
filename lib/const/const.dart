@@ -23,6 +23,10 @@ Color kbigContainerColor = Color(0xFFF8F8FC);
 Color kPhoneContainerColor= Color(0xFFE5E5FF);
 Color kMessageContainerColor= Color(0xFFFFF7E2);
 Color kVideoCallContainerColor= Color(0xFFDBFFDB);
+Color kBkashContainerColor=Color(0xFFD12053);
+Color kPaypalContainerColor=Color(0xFF1377FF);
+Color kStripeContainerColor=Color(0xFF2682FF);
+
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 5),

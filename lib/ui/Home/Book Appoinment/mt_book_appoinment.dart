@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Book%20Appoinment/mt_online_appoinment_details.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_patients_details.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../const/const.dart';
-import '../Styles/style.dart';
-import 'mt_home.dart';
+import '../../../const/const.dart';
+import '../../Styles/style.dart';
+import '../mt_home.dart';
 
 class BookAppoinment extends StatefulWidget {
   const BookAppoinment({Key? key}) : super(key: key);
@@ -79,7 +80,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                       child: AppButton(
                         elevation: 0,
                         enableScaleAnimation: false,
-                        onTap: () {},
+                        onTap: () =>OnlineAppoinmentDetails().launch(context),
                         shapeBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(6),
                             borderSide: BorderSide.none),
@@ -113,7 +114,6 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                 height: 16,
               ),
               Container(
-                width: context.width(),
                 decoration: BoxDecoration(
                     color: kbigContainerColor,
                     borderRadius: BorderRadius.only(
@@ -130,6 +130,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                           style: TextStyle(
                               fontWeight: FontWeight.w700, color: Colors.black),
                         ),
+                        SizedBox(height: 12,),
                         HorizontalList(
                             itemCount: day.length,
                             itemBuilder: (BuildContext context, int index) {
@@ -160,7 +161,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               );
                             }),
                         SizedBox(
-                          height: 10,
+                          height: 24,
                         ),
                         Text(
                           "Available Time",
@@ -168,7 +169,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               fontWeight: FontWeight.w700, color: Colors.black),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 12,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -261,7 +262,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 20,
                         ),
                         GridView.builder(
                             physics: NeverScrollableScrollPhysics(),
@@ -293,7 +294,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               );
                             }),
                         SizedBox(
-                          height: 10,
+                          height: 24,
                         ),
                         Text(
                           "Consultation Fees",
@@ -301,7 +302,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               color: Colors.black, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 12,
                         ),
                         Container(
                           decoration: BoxDecoration(

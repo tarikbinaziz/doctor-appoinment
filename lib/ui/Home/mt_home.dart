@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Notifications/mt_notifications.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_doctor_appoinment.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -74,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   IconlyLight.notification,
                   color: kTittleColor,
                 )),
-          ),
+          ).onTap(()=>NotificationsScreen().launch(context)),
         ),
       ),
       body: Padding(

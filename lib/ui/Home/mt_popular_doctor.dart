@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
@@ -8,7 +7,7 @@ import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 class PopularDoctorScreen extends StatefulWidget {
-  PopularDoctorScreen({Key? key}) : super(key: key);
+  const PopularDoctorScreen({Key? key}) : super(key: key);
 
   @override
   State<PopularDoctorScreen> createState() => _PopularDoctorScreenState();
@@ -45,189 +44,195 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
         body: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    contentPadding: EdgeInsets.zero,
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                        borderSide: BorderSide.none),
-                    prefixIcon: Icon(
-                      IconlyLight.search,
-                      color: kTittleColor,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.zero,
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                          borderSide: BorderSide.none),
+                      prefixIcon: Icon(
+                        IconlyLight.search,
+                        color: kTittleColor,
+                      ),
+                      hintText: "Search...",
+                      hintStyle: TextStyle(color: kSubTittleColor),
+                      filled: true,
+                      fillColor: kTextFieldColor),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      selected = 'first';
+                    });
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(6),
+                        color:
+                            selected == 'first' ? kMainColor : Colors.transparent,
+                        border: Border.all(color: kTextFieldBorderColor)),
+                    child: Text(
+                      "first",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600, color: kSubTittleColor),
                     ),
-                    hintText: "Search...",
-                    hintStyle: TextStyle(color: kSubTittleColor),
-                    filled: true,
-                    fillColor: kTextFieldColor),
-              ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    selected = 'first';
-                  });
-                },
-                child: Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      color:
-                          selected == 'first' ? kMainColor : Colors.transparent,
-                      border: Border.all(color: kTextFieldBorderColor)),
-                  child: Text(
-                    "first",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w600, color: kSubTittleColor),
                   ),
                 ),
-              ),
-              Expanded(
-                child: ListView.builder(
+                SizedBox(
+                  height: 24,
+                ),
+                ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
                   itemCount: allDoctors.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return SizedBox(
-                      height: context.height() / 3.8,
-                      width: context.width(),
-                      child: Card(
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: kSubTittleColor.withOpacity(0.10))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10.0, top: 12.0),
-                          child: Column(
-                            children: [
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: 82,
-                                    height: 82,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(8),
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                allDoctors[index].image ?? ''),
-                                            fit: BoxFit.fill)),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        allDoctors[index].doctorName ?? '',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w600),
+                    return Card(
+                      elevation: 0,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: BorderSide(
+                              color: kSubTittleColor.withOpacity(0.10))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 82,
+                                  height: 82,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              allDoctors[index].image ?? ''),
+                                          fit: BoxFit.fill)),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      allDoctors[index].doctorName ?? '',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                    Text(
+                                      allDoctors[index].speciality ?? '',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          color: kMainColor),
+                                    ),
+                                    SizedBox(
+                                      width: context.width() / 2,
+                                      child: Text(
+                                        allDoctors[index].hospital ?? '',
+                                        maxLines: 2,
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.w400),
                                       ),
-                                      Text(
-                                        allDoctors[index].speciality ?? '',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            color: kMainColor),
+                                    ),
+                                    RichText(
+                                        text: TextSpan(
+                                            text: "Working at: ",
+                                            style: TextStyle(
+                                                color: kTittleColor),
+                                            children: [
+                                          TextSpan(
+                                            text:
+                                                "${allDoctors[index].location}" ??
+                                                    '',
+                                            style: TextStyle(
+                                                color: kSubTittleColor),
+                                          )
+                                        ]))
+                                  ],
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 2,
+                            ),
+                            Row(
+                              //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(8),
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: kStarColor.withOpacity(0.15)),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        IconlyBold.star,
+                                        color: kStarColor,
+                                        size: 16,
                                       ),
                                       SizedBox(
-                                        width: context.width() / 2,
-                                        child: Text(
-                                          allDoctors[index].hospital ?? '',
-                                          maxLines: 2,
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.w400),
-                                        ),
+                                        width: 4,
                                       ),
-                                      RichText(
-                                          text: TextSpan(
-                                              text: "Working at: ",
-                                              style: TextStyle(
-                                                  color: kTittleColor),
-                                              children: [
-                                            TextSpan(
-                                              text:
-                                                  "${allDoctors[index].location}" ??
-                                                      '',
-                                              style: TextStyle(
-                                                  color: kSubTittleColor),
-                                            )
-                                          ]))
+                                      Text(
+                                        allDoctors[index].ratings ?? '',
+                                        style:
+                                            TextStyle(color: kSubTittleColor),
+                                      ),
+                                      SizedBox(
+                                        width: 4,
+                                      ),
+                                      Text(
+                                        "(${allDoctors[index].ratingCount})" ??
+                                            '',
+                                        style:
+                                            TextStyle(color: kSubTittleColor),
+                                      ),
                                     ],
-                                  )
-                                ],
-                              ),
-                              SizedBox(
-                                height: 2,
-                              ),
-                              Row(
-                                //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: kStarColor.withOpacity(0.15)),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                          IconlyBold.star,
-                                          color: kStarColor,
-                                          size: 16,
-                                        ),
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Text(
-                                          allDoctors[index].ratings ?? '',
-                                          style:
-                                              TextStyle(color: kSubTittleColor),
-                                        ),
-                                        SizedBox(
-                                          width: 4,
-                                        ),
-                                        Text(
-                                          "(${allDoctors[index].ratingCount})" ??
-                                              '',
-                                          style:
-                                              TextStyle(color: kSubTittleColor),
-                                        ),
-                                      ],
-                                    ),
                                   ),
-                                  SizedBox(
-                                    width: 8,
-                                  ),
-                                  AppButton(
+                                ),
+                                SizedBox(
+                                  width: 8,
+                                ),
+                                Expanded(
+                                  child: AppButton(
                                     padding: EdgeInsets.zero,
                                     elevation: 0,
                                     color: kMainColor,
                                     shapeBorder: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(5),
                                         borderSide: BorderSide.none),
-                                    width: context.width() / 1.7,
                                     text: "Book Now",
                                     textStyle: TextStyle(
                                         color: kLikeWhiteColor,
                                         fontWeight: FontWeight.w700),
                                     onTap: () {},
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ],
                         ),
-                      ).onTap(() => DoctorDetailsScreen().launch(context)),
-                    );
+                      ),
+                    ).onTap(() => DoctorDetailsScreen().launch(context));
                   },
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
