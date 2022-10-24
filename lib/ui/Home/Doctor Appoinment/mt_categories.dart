@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_heart.dart';
 import 'package:nb_utils/nb_utils.dart';
-import '../../const/const.dart';
-import '../Styles/style.dart';
+import '../../../const/const.dart';
+import '../../Styles/style.dart';
 
 class CategoriesScreen extends StatefulWidget {
   CategoriesScreen({Key? key}) : super(key: key);

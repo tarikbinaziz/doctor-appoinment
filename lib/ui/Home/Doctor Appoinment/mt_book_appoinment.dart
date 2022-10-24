@@ -1,14 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Book%20Appoinment/mt_online_appoinment_details.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_patients_details.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../../const/const.dart';
 import '../../Styles/style.dart';
-import '../mt_home.dart';
+import 'mt_Offline_Appointments_Details.dart';
+import 'mt_message.dart';
+import 'mt_online_appoinment_details.dart';
+import 'mt_video_call.dart';
+import 'mt_voice_call.dart';
 
 class BookAppoinment extends StatefulWidget {
   const BookAppoinment({Key? key}) : super(key: key);
@@ -98,7 +97,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                       child: AppButton(
                         elevation: 0,
                         enableScaleAnimation: false,
-                        onTap: () {},
+                        onTap: () => OfflineAppoinmentDetails().launch(context),
                         shapeBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(6),
                             borderSide: BorderSide(color: kMainColor)),
@@ -312,13 +311,14 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                             color: kLikeWhiteColor,
                           ),
                           child: ListTile(
+                            onTap: ()=>MessagingScreen().launch(context),
                             leading: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: kPhoneContainerColor),
                               child: ImageIcon(
-                                AssetImage("assets/images/phone.png"),
+                                AssetImage("assets/images/massege.png"),
                                 color: kMainColor,
                               ),
                             ),
@@ -347,13 +347,14 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                             color: kLikeWhiteColor,
                           ),
                           child: ListTile(
+                            onTap: ()=>VoiceCallScreen().launch(context),
                             leading: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: kMessageContainerColor),
                               child: ImageIcon(
-                                AssetImage("assets/images/massege.png"),
+                                AssetImage("assets/images/phone.png"),
                                 color: kKedneyBgColor,
                               ),
                             ),
@@ -382,6 +383,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                             color: kLikeWhiteColor,
                           ),
                           child: ListTile(
+                            onTap: ()=>VideoCallScreen().launch(context),
                             leading: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(

@@ -5,7 +5,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../../../model/mt_doctor_model.dart';
 import '../../Styles/style.dart';
-import '../mt_doctor_details.dart';
+import 'mt_doctor_details.dart';
 
 class MyAppoinmentScreen extends StatefulWidget {
   const MyAppoinmentScreen({Key? key}) : super(key: key);
@@ -107,7 +107,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                       itemCount: calls.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
+                          padding: const EdgeInsets.all(6.0),
                           child: Card(
                             elevation: 0,
                             margin: EdgeInsets.zero,
@@ -116,7 +116,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                                 side: BorderSide(
                                     color: kSubTittleColor.withOpacity(0.10))),
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(12.0),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

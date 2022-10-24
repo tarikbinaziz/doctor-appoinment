@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/model/mt_doctor_model.dart';
-import 'package:maan_doctor_appoinment/ui/Home/mt_doctor_details.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_doctor_details.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -47,7 +47,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 TextField(
@@ -65,7 +65,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                       filled: true,
                       fillColor: kTextFieldColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 InkWell(
@@ -88,11 +88,11 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: allDoctors.length,
                   itemBuilder: (BuildContext context, int index) {
@@ -129,7 +129,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                   children: [
                                     Text(
                                       allDoctors[index].doctorName ?? '',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.w600),
                                     ),
                                     Text(
@@ -165,7 +165,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 2,
                             ),
                             Row(
@@ -185,7 +185,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                         color: kStarColor,
                                         size: 16,
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 4,
                                       ),
                                       Text(
@@ -193,7 +193,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                         style:
                                             TextStyle(color: kSubTittleColor),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 4,
                                       ),
                                       Text(
@@ -205,7 +205,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                     ],
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 8,
                                 ),
                                 Expanded(

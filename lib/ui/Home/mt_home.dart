@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Notifications/mt_notifications.dart';
-import 'package:maan_doctor_appoinment/ui/Home/mt_doctor_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_doctor_appoinment.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../model/mt_doctor_model.dart';
-import 'mt_popular_doctor.dart';
+import 'Doctor Appoinment/mt_popular_doctor.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   IconlyLight.notification,
                   color: kTittleColor,
                 )),
-          ).onTap(()=>NotificationsScreen().launch(context)),
+          ).onTap(() => NotificationsScreen().launch(context)),
         ),
       ),
       body: Padding(
@@ -111,8 +111,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 12,
               ),
               Container(
-                height: context.height() / 5,
-                width: context.width(),
+                height: context.height() / 5.6,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/dr_appoinment.png"),
@@ -140,58 +140,53 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ).onTap(() => DoctorAppoinmentScreen().launch(context)),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: context.height() / 6.5,
-                    width: context.width() / 2.2,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/diagnostics.png"),
-                            fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 60,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
+                  Expanded(
+                    child: Container(
+                      height: context.height() / 6.5,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/diagnostics.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
                           child: Text(
                             "Diagnostics",
                             style: ktitleTextStyle.copyWith(fontSize: 18),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                  Container(
-                    height: context.height() / 6.5,
-                    width: context.width() / 2.2,
-                    decoration: BoxDecoration(
-                        image: const DecorationImage(
-                            image: AssetImage("assets/images/pharmacy.png"),
-                            fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(
-                          height: 60,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
+                  SizedBox(
+                    width: 12,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: context.height() / 6.5,
+                      decoration: BoxDecoration(
+                          image: const DecorationImage(
+                              image: AssetImage("assets/images/pharmacy.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
                           child: Text(
                             "Pharmacy",
                             style: ktitleTextStyle.copyWith(fontSize: 18),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ],
@@ -200,60 +195,54 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 12,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: context.height() / 6.5,
-                    width: context.width() / 2.2,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/ambulance.png"),
-                            fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 60,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
+                  Expanded(
+                    child: Container(
+                      height: context.height() / 6.5,
+                      decoration: BoxDecoration(
+                          image: const DecorationImage(
+                              image: AssetImage("assets/images/ambulance.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
                           child: Text(
                             "Ambulance",
                             style: ktitleTextStyle.copyWith(fontSize: 18.0),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                  Container(
-                    height: context.height() / 6.5,
-                    width: context.width() / 2.2,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/images/nursing.png"),
-                            fit: BoxFit.fill),
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          height: 35,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 10.0),
+                  const SizedBox(
+                    width: 12,
+                  ),
+                  Expanded(
+                    child: Container(
+                      height: context.height() / 6.5,
+                      decoration: BoxDecoration(
+                          image: const DecorationImage(
+                              image: AssetImage("assets/images/nursing.png"),
+                              fit: BoxFit.fill),
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
                           child: Text(
                             "Nursing\nCare",
                             style: ktitleTextStyle.copyWith(fontSize: 18.0),
                           ),
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 24,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -268,12 +257,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ).onTap(() => PopularDoctorScreen().launch(context)),
                 ],
               ),
+              const SizedBox(
+                height: 12,
+              ),
               HorizontalList(
                 runSpacing: 0.0,
+                padding: EdgeInsets.zero,
                 itemBuilder: (BuildContext context, int index) {
                   return SizedBox(
-                    height: context.height() / 3.6,
-                    width: context.width() / 1.3,
+                    width: context.width()/1.3,
                     child: Card(
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -284,70 +276,66 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.only(
                             left: 8.0, right: 8.0, bottom: 8.0),
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              height: 75,
-                              width: context.width(),
-                              child: ListTile(
-                                isThreeLine: true,
-                                contentPadding: EdgeInsets.zero,
-                                minLeadingWidth: 0,
-                                minVerticalPadding: 0,
-                                leading: Container(
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      border: Border.all(
-                                          color: kWatchColor.withOpacity(0.10),
-                                          width: 2)),
-                                  child: Badge(
-                                      badgeColor: kWatchColor,
-                                      position:
-                                          BadgePosition.topEnd(top: -2, end: 4),
-                                      borderRadius: BorderRadius.circular(40),
-                                      badgeContent: Container(
-                                        padding: EdgeInsets.zero,
-                                        decoration: BoxDecoration(
-                                            shape: BoxShape.circle),
+                            ListTile(
+                              contentPadding: EdgeInsets.zero,
+                              minLeadingWidth: 0,
+                              minVerticalPadding: 0,
+                              leading: Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: kWatchColor.withOpacity(0.10),
+                                        width: 2)),
+                                child: Badge(
+                                    badgeColor: kWatchColor,
+                                    position:
+                                        BadgePosition.topEnd(top: -2, end: 4),
+                                    borderRadius: BorderRadius.circular(40),
+                                    badgeContent: Container(
+                                      padding: EdgeInsets.zero,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: CircleAvatar(
+                                        radius: 40,
+                                        backgroundImage: AssetImage(
+                                            allDoctors[index].image ?? ''),
                                       ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(5.0),
-                                        child: CircleAvatar(
-                                          radius: 40,
-                                          backgroundImage: AssetImage(
-                                              allDoctors[index].image ?? ''),
-                                        ),
-                                      )),
-                                ),
-                                title: Padding(
-                                  padding: EdgeInsets.only(top: 10.0),
-                                  child: Text(
-                                    allDoctors[index].doctorName ?? '',
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.w600),
-                                  ),
-                                ),
-                                subtitle: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      allDoctors[index].speciality ?? '',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          color: kMainColor),
-                                    ),
-                                     Text(
-                                      allDoctors[index].hospital ?? '',
-                                      style: const TextStyle(
-                                          fontWeight: FontWeight.w400),
-                                    ),
-                                  ],
+                                    )),
+                              ),
+                              title: Padding(
+                                padding: EdgeInsets.only(top: 10.0),
+                                child: Text(
+                                  allDoctors[index].doctorName ?? '',
+                                  style:
+                                      TextStyle(fontWeight: FontWeight.w600),
                                 ),
                               ),
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    allDoctors[index].speciality ?? '',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        color: kMainColor),
+                                  ),
+                                  Text(
+                                    allDoctors[index].hospital ?? '',
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.w400),
+                                  ),
+                                ],
+                              ),
                             ),
-                            SizedBox(height: 14,),
+                            const SizedBox(height: 6,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -360,21 +348,27 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                     RichText(
                                         text: TextSpan(
-                                            text:  allDoctors[index].ratings ?? '',
+                                            text:
+                                                allDoctors[index].ratings ?? '',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 color: kTittleColor),
                                             children: [
-                                              WidgetSpan(child: SizedBox(width: 5,)),
+                                          WidgetSpan(
+                                              child: SizedBox(
+                                            width: 5,
+                                          )),
                                           TextSpan(
-                                              text:  "(100+ Ratings)",
+                                              text: "(100+ Ratings)",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w400,
                                                   color: kSubTittleColor)),
                                         ]))
                                   ],
                                 ),
-                                SizedBox(height: 10,),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Row(
                                   children: [
                                     Icon(
@@ -382,15 +376,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                       color: kWatchColor,
                                       size: 14,
                                     ),
-                                    SizedBox(width: 4,),
+                                    SizedBox(
+                                      width: 4,
+                                    ),
                                     RichText(
                                         text: TextSpan(
-                                            text:  allDoctors[index].experience ?? '',
+                                            text:
+                                                allDoctors[index].experience ??
+                                                    '',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 color: kTittleColor),
                                             children: [
-                                              WidgetSpan(child: SizedBox(width: 6,)),
+                                          WidgetSpan(
+                                              child: SizedBox(
+                                            width: 6,
+                                          )),
                                           TextSpan(
                                               text: "Year Exp ",
                                               style: TextStyle(
@@ -407,7 +408,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             AppButton(
                               text: "Book Now",
                               textColor: kLikeWhiteColor,
-                              width: context.width(),
+                             width:double.infinity,
                               padding: EdgeInsets.zero,
                               enableScaleAnimation: false,
                               elevation: 0,
@@ -427,9 +428,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: allDoctors.length,
                 spacing: 0.0,
               ),
-              SizedBox(
-                height: 6,
-              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -443,12 +441,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 12,
+              ),
               HorizontalList(
                 itemCount: 4,
                 itemBuilder: (BuildContext context, int index) {
                   return SizedBox(
-                    height: context.height() / 2.6,
-                    width: context.width() / 1.9,
+                    width: context.width()/2.2,
                     child: Card(
                       elevation: 0,
                       shape: RoundedRectangleBorder(
@@ -458,6 +458,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             CircleAvatar(
@@ -477,11 +478,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(
                               height: 6,
                             ),
-                            Text(
-                              "Known as Covid-19 Virus\nQuantitaticve Pcr",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: kSubTittleColor),
+                            FittedBox(
+                              child: Text(
+                                "Known as Covid-19 Virus\nQuantitaticve Pcr",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    color: kSubTittleColor),
+                              ),
                             ),
                             SizedBox(
                               height: 6,
@@ -517,7 +520,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               SizedBox(
-                height: 6,
+                height: 12,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -540,8 +543,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   spacing: 15,
                   itemBuilder: (_, index) {
                     return SizedBox(
-                      height: context.height() / 2.4,
-                      width: context.width() / 1.9,
+                      width: context.width() / 2.2,
                       child: Card(
                         elevation: 0,
                         shape: RoundedRectangleBorder(
@@ -549,11 +551,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             side: BorderSide(
                                 color: kSubTittleColor.withOpacity(0.10))),
                         child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Stack(alignment: Alignment.topLeft, children: [
                               Container(
-                                height: context.height() / 5.4,
-                                width: context.width() / 2,
+                                height: context.height() / 6,
                                 decoration: BoxDecoration(
                                     image: DecorationImage(
                                         image: AssetImage(
@@ -579,7 +581,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(color: kLikeWhiteColor),
                                 ),
                               )
-                            ]),SizedBox(height: 4,),
+                            ]),
+                            SizedBox(
+                              height: 4,
+                            ),
                             Padding(
                               padding: const EdgeInsets.all(10.0),
                               child: Column(
@@ -598,10 +603,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                           text: "\$6.99",
                                           style: TextStyle(color: kWatchColor),
                                           children: [
-                                            WidgetSpan(
-                                                // alignment: PlaceholderAlignment.baseline,
-                                                // baseline: TextBaseline.alphabetic,
-                                                child: SizedBox(width: 10)),
+                                        WidgetSpan(
+                                            // alignment: PlaceholderAlignment.baseline,
+                                            // baseline: TextBaseline.alphabetic,
+                                            child: SizedBox(width: 10)),
                                         TextSpan(
                                             text: "\$6.99",
                                             style: TextStyle(
@@ -615,12 +620,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                   AppButton(
                                     text: "order Now",
                                     textColor: kLikeWhiteColor,
+                                    enableScaleAnimation: false,
                                     width: context.width(),
                                     elevation: 0,
                                     padding: EdgeInsets.zero,
                                     color: kMainColor,
                                     onTap: () => HomeScreen().launch(context),
-                                    //  padding: EdgeInsets.zero,
                                     shapeBorder: OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                         borderRadius: BorderRadius.circular(6)),

@@ -4,8 +4,9 @@ import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../model/mt_doctor_model.dart';
-import 'Book Appoinment/mt_book_appoinment.dart';
+import '../../../model/mt_doctor_model.dart';
+import 'mt_book_appoinment.dart';
+
 
 class DoctorDetailsScreen extends StatefulWidget {
   const DoctorDetailsScreen({Key? key}) : super(key: key);
@@ -58,10 +59,9 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Container(
-
             decoration: BoxDecoration(
                 color: kLikeWhiteColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 )),
@@ -69,7 +69,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                 padding: EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6.0),
                       color: kMainColor.withOpacity(0.10)),
@@ -78,18 +78,21 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                     color: kMainColor,
                   ),
                 ),
-                SizedBox(width: 10,),
-
+                const SizedBox(
+                  width: 10,
+                ),
                 Expanded(
                   child: AppButton(
                     enableScaleAnimation: false,
-                    onTap: ()=> BookAppoinment().launch(context),
+                    onTap: () => const BookAppoinment().launch(context),
                     shapeBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(6),
                         borderSide: BorderSide.none),
                     color: kMainColor,
                     text: "Book Appointment",
-                    textStyle: TextStyle(color: kElevatedButtonTextColor,fontWeight: FontWeight.w700),
+                    textStyle: TextStyle(
+                        color: kElevatedButtonTextColor,
+                        fontWeight: FontWeight.w700),
                   ),
                 )
               ],
@@ -116,7 +119,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                       AssetImage(allDoctors[index].image ?? ''),
                                   fit: BoxFit.fill)),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10,
                         ),
                         Column(
@@ -124,7 +127,8 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                           children: [
                             Text(
                               allDoctors[index].doctorName ?? '',
-                              style: TextStyle(fontWeight: FontWeight.w600),
+                              style:
+                                  const TextStyle(fontWeight: FontWeight.w600),
                             ),
                             SizedBox(
                               width: context.width() / 1.5,
@@ -138,7 +142,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 18,
                     ),
                     Row(
@@ -154,7 +158,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Container(
@@ -167,7 +171,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                   child: Image.asset("assets/images/drexp.png"),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Column(
@@ -197,7 +201,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Container(
@@ -212,7 +216,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               Column(
@@ -241,13 +245,13 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 24,
               ),
               Container(
                 decoration: BoxDecoration(
                     color: kbigContainerColor,
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                     )),
@@ -260,22 +264,19 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         "Biography",
                         style: ktitleTextStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Text(
                         biography,
                         style: ksubTitleTextStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24,
                       ),
                       Text(
                         "Gallery",
                         style: ktitleTextStyle,
-                      ),
-                      SizedBox(
-                        height: 12,
                       ),
                       HorizontalList(
                         itemCount: galleryImages.length,
@@ -290,14 +291,11 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                           AssetImage(galleryImages[index]))));
                         },
                       ),
-                      SizedBox(
-                        height: 24,
-                      ),
                       Text(
                         "Availability",
                         style: ktitleTextStyle,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       Text(
@@ -321,7 +319,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                 size: 12,
                                 color: kStarColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 2,
                               ),
                               Text(
@@ -332,16 +330,15 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 12,
                       ),
                       ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: reviewImages.length,
                         itemBuilder: (BuildContext context, int index) {
                           return SizedBox(
-                            height: context.height() / 5,
                             width: context.width(),
                             child: Card(
                               elevation: 0,
@@ -350,44 +347,47 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                   side: BorderSide(
                                       color:
                                           kSubTittleColor.withOpacity(0.10))),
-                              child: Column(
-                                children: [
-                                  ListTile(
-                                    minVerticalPadding: 0,
-                                    leading: CircleAvatar(
-                                      radius: 20,
-                                      backgroundImage:
-                                          AssetImage(reviewImages[index]),
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 8.0, right: 8.0, bottom: 16.0),
+                                child: Column(
+                                  children: [
+                                    ListTile(
+                                      contentPadding: EdgeInsets.zero,
+                                      minVerticalPadding: 0.0,
+                                      leading: CircleAvatar(
+                                        radius: 20,
+                                        backgroundImage:
+                                            AssetImage(reviewImages[index]),
+                                      ),
+                                      title: Text(
+                                        "Jerome Bell",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            color: kTittleColor),
+                                      ),
+                                      subtitle: RatingBarWidget(
+                                        size: 14,
+                                        onRatingChanged: (value) {},
+                                        itemCount: 5,
+                                        rating: 4,
+                                        activeColor: kStarColor,
+                                        inActiveColor: kStarColor,
+                                      ),
+                                      trailing: Text(
+                                        "31 Min Ago",
+                                        style:
+                                            TextStyle(color: kSubTittleColor),
+                                      ),
                                     ),
-                                    title: Text(
-                                      "Jerome Bell",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          color: kTittleColor),
-                                    ),
-                                    subtitle: RatingBarWidget(
-                                      size: 14,
-                                      onRatingChanged: (value) {},
-                                      itemCount: 5,
-                                      rating: 4,
-                                      activeColor: kStarColor,
-                                      inActiveColor: kStarColor,
-                                    ),
-                                    trailing: Text(
-                                      "31 Min Ago",
-                                      style: TextStyle(color: kSubTittleColor),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(left: 16.0),
-                                    child: Text(
+                                    Text(
                                       reviewWomen,
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           color: kSubTittleColor),
-                                    ),
-                                  )
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           );

@@ -4,7 +4,7 @@ import 'package:flutter_credit_card/credit_card_form.dart';
 import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/credit_card_widget.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Appoinment/mt_my_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_my_appoinment.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../../Auth/mt_signin.dart';
@@ -43,7 +43,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
     kWatchColor.withOpacity(0.10)
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +54,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
           color: kTittleColor,
         ),
         title: Text(
-          "Book Appointment",
+          "Payment",
           style: ktitleTextStyle,
         ),
       ),
@@ -71,7 +70,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
               builder: (BuildContext context) {
                 return Dialog(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12.0)), //this right here
+                        borderRadius:
+                            BorderRadius.circular(12.0)), //this right here
                     child: Container(
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
@@ -80,15 +80,23 @@ class _PaymentScreenState extends State<PaymentScreen> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(20.0),
-                              child: Image.asset("assets/images/hand_board.png",width: 124,),
+                              child: Image.asset(
+                                "assets/images/hand_board.png",
+                                width: 124,
+                              ),
                             ),
                             Text(
                               "Congratulation!",
-                              style: TextStyle(fontWeight: FontWeight.bold,color: kTittleColor,fontSize: 28),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: kTittleColor,
+                                  fontSize: 28),
                             ),
-                            SizedBox(height: 12,),
+                            SizedBox(
+                              height: 12,
+                            ),
                             RichText(
-                              textAlign: TextAlign.center,
+                                textAlign: TextAlign.center,
                                 text: TextSpan(
                                     text: "Your appointment booking completed.",
                                     style: ksubTitleTextStyle,
@@ -98,10 +106,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                           style: TextStyle(color: kMainColor)),
                                       TextSpan(
                                         text: " will video call",
-                                        style: TextStyle(color: kSubTittleColor),
+                                        style:
+                                            TextStyle(color: kSubTittleColor),
                                       )
                                     ])),
-                            SizedBox(height: 28,),
+                            SizedBox(
+                              height: 28,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               mainAxisSize: MainAxisSize.min,
@@ -118,11 +129,14 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                           Text(
                                             "Guy Hawkins",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500, color: kTittleColor),
+                                                fontWeight: FontWeight.w500,
+                                                color: kTittleColor),
                                           ),
                                         ],
                                       ),
-                                      SizedBox(height: 10,),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
                                       Row(
                                         children: [
                                           Icon(
@@ -132,19 +146,21 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                           Text(
                                             "12 July 2022",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500, color: kTittleColor),
+                                                fontWeight: FontWeight.w500,
+                                                color: kTittleColor),
                                           ),
                                         ],
                                       ),
                                     ],
                                   ),
                                 ),
-                                SizedBox(width: 20,),
+                                SizedBox(
+                                  width: 20,
+                                ),
                                 Expanded(
                                   child: Column(
                                     children: [
                                       Row(
-
                                         children: [
                                           Icon(
                                             IconlyBold.wallet,
@@ -153,13 +169,15 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                           Text(
                                             "\$15 USD",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500, color: kTittleColor),
+                                                fontWeight: FontWeight.w500,
+                                                color: kTittleColor),
                                           ),
                                         ],
                                       ),
-                                      SizedBox(height: 10,),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
                                       Row(
-
                                         children: [
                                           Icon(
                                             IconlyBold.timeCircle,
@@ -168,7 +186,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                           Text(
                                             "01:00 PM",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500, color: kTittleColor),
+                                                fontWeight: FontWeight.w500,
+                                                color: kTittleColor),
                                           ),
                                         ],
                                       ),
@@ -177,11 +196,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 24,),
+                            SizedBox(
+                              height: 24,
+                            ),
                             AppButton(
                               text: "See Appointment",
                               textColor: kLikeWhiteColor,
-                              width:context.width(),
+                              width: context.width(),
                               enableScaleAnimation: false,
                               padding: EdgeInsets.zero,
                               elevation: 0,
@@ -194,7 +215,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             ),
                             AppButton(
                               text: "Back to Home",
-                              width:context.width(),
+                              width: context.width(),
                               padding: EdgeInsets.zero,
                               textColor: kMainColor,
                               enableScaleAnimation: false,
@@ -206,7 +227,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                   borderSide: BorderSide(color: kMainColor),
                                   borderRadius: BorderRadius.circular(6)),
                             ),
-
                           ],
                         ),
                       ),
@@ -309,13 +329,20 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       themeColor: Colors.red,
                       obscureCvv: false,
                       obscureNumber: false,
-                      isHolderNameVisible: false,
+                      isHolderNameVisible: true,
                       isCardNumberVisible: true,
                       isExpiryDateVisible: true,
-                      cardNumberDecoration: InputDecoration(
+                      cardHolderDecoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Name',
                         hintText: 'Enter card holder name',
+                        labelStyle: TextStyle(color: kTittleColor),
+                        hintStyle: TextStyle(color: kSubTittleColor),
+                      ),
+                      cardNumberDecoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Card Number',
+                        hintText: 'Enter card Number',
                         labelStyle: TextStyle(color: kTittleColor),
                         hintStyle: TextStyle(color: kSubTittleColor),
                       ),

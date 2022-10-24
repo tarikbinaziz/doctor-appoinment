@@ -26,6 +26,8 @@ Color kVideoCallContainerColor= Color(0xFFDBFFDB);
 Color kBkashContainerColor=Color(0xFFD12053);
 Color kPaypalContainerColor=Color(0xFF1377FF);
 Color kStripeContainerColor=Color(0xFF2682FF);
+Color kShadowColor=Color(0xFF473232);
+Color kTruckColor=Color(0xFF12B289);
 
 
 InputDecoration otpInputDecoration = InputDecoration(
