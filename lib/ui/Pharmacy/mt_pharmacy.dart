@@ -2,13 +2,15 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_near_by_pharmacy.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy_categories.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/const.dart';
 import '../Styles/style.dart';
-import 'Doctor Appoinment/mt_categories.dart';
-import 'Doctor Appoinment/mt_popular_doctor.dart';
-import 'mt_heart.dart';
+import '../Home/Doctor Appoinment/mt_categories.dart';
+import '../Home/Doctor Appoinment/mt_popular_doctor.dart';
+import '../Home/mt_heart.dart';
 
 class PharmacyScreen extends StatefulWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
@@ -198,7 +200,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                         Text(
                           "View All",
                           style: ksubTitleTextStyle,
-                        ).onTap(() => CategoriesScreen().launch(context)),
+                        ).onTap(() => PharmacyCategoriesScreen().launch(context)),
                       ],
                     ),
                     const SizedBox(
@@ -249,7 +251,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                         Text(
                           "View All",
                           style: ksubTitleTextStyle,
-                        ).onTap(() => PopularDoctorScreen().launch(context)),
+                        ).onTap(() => NearByPharmacyScreen().launch(context)),
                       ],
                     ),
                     const SizedBox(

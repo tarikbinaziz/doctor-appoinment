@@ -6,7 +6,7 @@ import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_cart.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_history.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_home.dart';
-import 'package:maan_doctor_appoinment/ui/Home/mt_pharmacy.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_profile.dart';
 
 class HomeBottomNavBarScreen extends StatefulWidget {
