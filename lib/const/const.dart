@@ -20,15 +20,15 @@ Color kContainerBgColor = const Color(0xFFE5E5E5);
 Color kDrContainerColor = const Color(0xFFDDFFDD);
 Color kPatientContainerColor = const Color(0xFFFAEBC8);
 Color kbigContainerColor = const Color(0xFFF8F8FC);
-Color kPhoneContainerColor= const Color(0xFFE5E5FF);
-Color kMessageContainerColor= const Color(0xFFFFF7E2);
-Color kVideoCallContainerColor= const Color(0xFFDBFFDB);
-Color kBkashContainerColor=const Color(0xFFD12053);
-Color kPaypalContainerColor=const Color(0xFF1377FF);
-Color kStripeContainerColor=const Color(0xFF2682FF);
-Color kShadowColor=const Color(0xFF473232);
-Color kTruckColor=const Color(0xFF12B289);
-
+Color kPhoneContainerColor = const Color(0xFFE5E5FF);
+Color kMessageContainerColor = const Color(0xFFFFF7E2);
+Color kVideoCallContainerColor = const Color(0xFFDBFFDB);
+Color kBkashContainerColor = const Color(0xFFD12053);
+Color kPaypalContainerColor = const Color(0xFF1377FF);
+Color kStripeContainerColor = const Color(0xFF2682FF);
+Color kShadowColor = const Color(0xFF473232);
+Color kTruckColor = const Color(0xFF12B289);
+Color kCartColor = const Color(0xFFCAFFCD);
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(vertical: 5),
@@ -43,4 +43,8 @@ String signInText =
 
 String biography =
     "Dr. Josiah Toor treated more than 5,000 cancer pati-ent who had been written off as incurable by other doctors. He claimed no miracle cures, but the success record of his revolutionary whole body treatment was extraordinary. This is the story of a tempestuous life; his Ringberg Clinic in Bavaria, ";
-String reviewWomen= "Tortor ultrices vel vulputate sollicitudin vitae. Nunc enim sapien integer facilisis.";
+String reviewWomen =
+    "Tortor ultrices vel vulputate sollicitudin vitae. Nunc enim sapien integer facilisis.";
+String aboutUs =
+    "Pellentesque egestas sit tincidunt porta leo a con se ctetur. At nisl semper urna vitae sed\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Odio vitae scelerisque sed ut. Tellus viverra facil isi sagittis hac. Ac imperdiet ultrices fringilla curabit ur nullam nibh amet, eu.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Et consequat aliquet massa mattis nec, suscipit erat. Cras dui, purus neque consectetur. Lectus non ac tempus aliquam urna, sit donec. Eu aliquet et eget penatibus egestas mattis sed. Dolor ipsum eu et molestie. Neque nibh vulputate molestie amet morbi odio. At elementum, rhoncus, magna ipsum, et morbi dictum porttitor. Tincidunt imperdiet bibendum nec volutpat amet, sed pulvinar pellentesque consectetur. Urna nunc, id nibh facilisis amet urna non. Nisi justo, eu risus id. Ut duis faucibus arcu nibh. ";
+String napaDetails= "Take this medicine in the dose and duration as advised by your doctor. Swallow it as a whole. Do not chew, crush or break it. Napa Extend is to be taken with food.";

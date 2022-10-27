@@ -5,6 +5,10 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../const/const.dart';
+import '../../model/mt_doctor_model.dart';
+import '../Home/Patients Details/mt_patients_details.dart';
+import '../Home/mt_home.dart';
+import 'mt_medicine_details.dart';
 
 class PharmacyDetailsScreen extends StatefulWidget {
   const PharmacyDetailsScreen({Key? key}) : super(key: key);
@@ -24,6 +28,19 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
   }
 
   late ScrollController scrollController;
+  var index = 0;
+  List reviewImages = [
+    "assets/images/review_man.png",
+    "assets/images/review_women.png",
+    "assets/images/review_man.png",
+    "assets/images/review_women.png",
+    "assets/images/review_man.png",
+    "assets/images/review_women.png",
+    "assets/images/review_man.png",
+    "assets/images/review_women.png",
+    "assets/images/review_man.png",
+    "assets/images/review_women.png",
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +96,20 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                 ),
               ),
             ]),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: AppButton(
+            text: "Upload Prescription",
+            textColor: kLikeWhiteColor,
+            elevation: 0,
+            color: kMainColor,
+            onTap: () => PatientsDetailsScreen().launch(context),
+            //  padding: EdgeInsets.zero,
+            shapeBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(6)),
+          ),
+        ),
         body: Stack(
           children: [
             Container(
@@ -260,18 +291,42 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          height: 110,
-                                          decoration: const BoxDecoration(
-                                              borderRadius: BorderRadius.only(
-                                                  topLeft: Radius.circular(10),
-                                                  topRight:
-                                                      Radius.circular(10)),
-                                              image: DecorationImage(
-                                                  image: AssetImage(
-                                                      "assets/images/napa.png"),
-                                                  fit: BoxFit.fill)),
-                                        ),
+                                        Stack(
+                                            alignment: Alignment.topRight,
+                                            children: [
+                                              Container(
+                                                height: 110,
+                                                decoration: const BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                            topLeft: Radius
+                                                                .circular(10),
+                                                            topRight: Radius
+                                                                .circular(10)),
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/images/napa.png"),
+                                                        fit: BoxFit.fill)),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.all(8.0),
+                                                child: Container(
+                                                  decoration: BoxDecoration(
+                                                      shape: BoxShape.circle,
+                                                      color: kCartColor),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsets.all(
+                                                            8.0),
+                                                    child: Icon(
+                                                      FeatherIcons.shoppingCart,
+                                                      color: kWatchColor,
+                                                    ),
+                                                  ),
+                                                ),
+                                              )
+                                            ]),
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Column(
@@ -301,33 +356,275 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                       style: TextStyle(
                                                           color:
                                                               kSubTittleColor),
-                                                  children: [
-                                                      TextSpan(
+                                                      children: [
+                                                    TextSpan(
                                                       text: ' \$6.99 ',
                                                       style: TextStyle(
-                                                          color:
-                                                          kMainColor),
-                                                      ),  TextSpan(
+                                                          color: kMainColor),
+                                                    ),
+                                                    TextSpan(
                                                       text: ' \$7.9 ',
                                                       style: TextStyle(
                                                           color:
-                                                          kSubTittleColor,
-                                                      decoration: TextDecoration.lineThrough),
-
-                                                      ),
-
-                                                  ]))
+                                                              kSubTittleColor,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .lineThrough),
+                                                    ),
+                                                  ])),
+                                              AppButton(
+                                                text: "Book Now",
+                                                textColor: kLikeWhiteColor,
+                                                width: double.infinity,
+                                                padding: EdgeInsets.zero,
+                                                enableScaleAnimation: false,
+                                                elevation: 0,
+                                                color: kMainColor,
+                                                onTap: () => HomeScreen()
+                                                    .launch(context),
+                                                //  padding: EdgeInsets.zero,
+                                                shapeBorder: OutlineInputBorder(
+                                                    borderSide: BorderSide.none,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6)),
+                                              ),
                                             ],
                                           ),
                                         )
                                       ],
                                     ),
-                                  )
+                                  ).onTap(()=>MedicineDetailsScreen().launch(context))
                                 ],
                               ),
-                              Text('tarik'),
-                              Text('tarik'),
-                              Text('tarik'),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'About Us',
+                                    style: ktitleTextStyle,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Text(
+                                    aboutUs,
+                                    style: ksubTitleTextStyle,
+                                  ),
+                                ],
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Open - Closed',
+                                    style: ktitleTextStyle,
+                                  ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Monday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Tuesday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Wednesday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ), SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Thursday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ), SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Friday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ), SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Saturday",
+                                        style: ksubTitleTextStyle,
+                                      ),
+                                      Text(
+                                        "10:00 AM - 10:00 PM",
+                                        style: TextStyle(color: kTittleColor),
+                                      ),
+                                    ],
+                                  ), SizedBox(
+                                    height: 16,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Sunday",
+                                        style: ksubTitleTextStyle.copyWith(color: kBadgeColor),
+                                      ),
+                                      Text(
+                                        "Closed",
+                                        style: TextStyle(color: kBadgeColor),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                             Column(children: [
+                               Row(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                   Text(
+                                     "Review (${allDoctors[index].ratingCount})",
+                                     style: ktitleTextStyle,
+                                   ),
+                                   Row(
+                                     children: [
+                                       Icon(
+                                         IconlyBold.star,
+                                         size: 12,
+                                         color: kStarColor,
+                                       ),
+                                       const SizedBox(
+                                         width: 2,
+                                       ),
+                                       Text(
+                                         "${allDoctors[index].ratings}",
+                                         style: ktitleTextStyle,
+                                       ),
+                                     ],
+                                   ),
+                                 ],
+                               ),
+                               ListView.builder(
+                                 padding: EdgeInsets.zero,
+                                 shrinkWrap: true,
+                                 physics: const NeverScrollableScrollPhysics(),
+                                 itemCount: reviewImages.length,
+                                 itemBuilder: (BuildContext context, int index) {
+                                   return SizedBox(
+                                     width: context.width(),
+                                     child: Card(
+                                       elevation: 0,
+                                       shape: RoundedRectangleBorder(
+                                           borderRadius: BorderRadius.circular(10),
+                                           side: BorderSide(
+                                               color:
+                                               kSubTittleColor.withOpacity(0.10))),
+                                       child: Padding(
+                                         padding: const EdgeInsets.only(
+                                             left: 8.0, right: 8.0, bottom: 16.0),
+                                         child: Column(
+                                           children: [
+                                             ListTile(
+                                               contentPadding: EdgeInsets.zero,
+                                               minVerticalPadding: 0.0,
+                                               leading: CircleAvatar(
+                                                 radius: 20,
+                                                 backgroundImage:
+                                                 AssetImage(reviewImages[index]),
+                                               ),
+                                               title: Text(
+                                                 "Jerome Bell",
+                                                 style: TextStyle(
+                                                     fontWeight: FontWeight.w500,
+                                                     color: kTittleColor),
+                                               ),
+                                               subtitle: RatingBarWidget(
+                                                 size: 14,
+                                                 onRatingChanged: (value) {},
+                                                 itemCount: 5,
+                                                 rating: 4,
+                                                 activeColor: kStarColor,
+                                                 inActiveColor: kStarColor,
+                                               ),
+                                               trailing: Text(
+                                                 "31 Min Ago",
+                                                 style:
+                                                 TextStyle(color: kSubTittleColor),
+                                               ),
+                                             ),
+                                             Text(
+                                               reviewWomen,
+                                               style: TextStyle(
+                                                   fontWeight: FontWeight.w400,
+                                                   color: kSubTittleColor),
+                                             )
+                                           ],
+                                         ),
+                                       ),
+                                     ),
+                                   );
+                                 },
+                               ),
+                             ],)
                             ],
                           ),
                         )
