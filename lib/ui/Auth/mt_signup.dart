@@ -62,9 +62,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   textFieldType: TextFieldType.NAME,
                   decoration: InputDecoration(
                       label: Text("Full Name"),
-                      labelStyle: TextStyle(color: kTittleColor),
+                      labelStyle: TextStyle(color: kTitleColor),
                       hintText: "Jane Cooper",
-                      hintStyle: TextStyle(color: kSubTittleColor),
+                      hintStyle: TextStyle(color: kSubTitleColor),
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: OutlineInputBorder(
                           borderSide: BorderSide(color: kTextFieldBorderColor)))),
@@ -75,9 +75,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   textFieldType: TextFieldType.EMAIL,
                   decoration: InputDecoration(
                       label: Text("Email"),
-                      labelStyle: TextStyle(color: kTittleColor),
+                      labelStyle: TextStyle(color: kTitleColor),
                       hintText: "janecooper@gmail.com",
-                      hintStyle: TextStyle(color: kSubTittleColor),
+                      hintStyle: TextStyle(color: kSubTitleColor),
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: OutlineInputBorder(
                           borderSide: BorderSide(color: kTextFieldBorderColor)))),
@@ -88,7 +88,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   textFieldType: TextFieldType.PASSWORD,
                   decoration: InputDecoration(
                       label: Text("Password"),
-                      labelStyle: TextStyle(color: kTittleColor),
+                      labelStyle: TextStyle(color: kTitleColor),
                       hintText: "******",
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: OutlineInputBorder(
@@ -100,7 +100,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 textFieldType: TextFieldType.NUMBER,
                 decoration: InputDecoration(
                     label: Text("Mobile Number"),
-                    labelStyle: TextStyle(color: kTittleColor),
+                    labelStyle: TextStyle(color: kTitleColor),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                         borderSide: BorderSide(color: kTextFieldBorderColor)),
@@ -132,7 +132,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         this.value=value!;
                       });
                     },
-                    side: BorderSide(color: kSubTittleColor),
+                    side: BorderSide(color: kSubTitleColor),
                     checkColor: kLikeWhiteColor,
                     activeColor: kMainColor,
                   ),
@@ -140,13 +140,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     textAlign: TextAlign.start,
                     text: TextSpan(
                         text: "I have read and agree to the ",
-                        style: TextStyle(color: kSubTittleColor),
+                        style: TextStyle(color: kSubTitleColor),
                         children: [
                           TextSpan(
                               text: "privacy policy",
                               style: TextStyle(color: kMainColor)),
                           TextSpan(
-                              text: " &", style: TextStyle(color: kTittleColor)),
+                              text: " &", style: TextStyle(color: kTitleColor)),
                           TextSpan(
                               text: "\nTermes & Conditions",
                               style: TextStyle(color: kMainColor)),
@@ -164,7 +164,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               RichText(
                 text: TextSpan(
                     text: "Already have an account? ",
-                    style: TextStyle(color: kSubTittleColor),
+                    style: TextStyle(color: kSubTitleColor),
                     children: [
                       TextSpan(
                           text: "SIGN IN", style: TextStyle(color: kMainColor)),

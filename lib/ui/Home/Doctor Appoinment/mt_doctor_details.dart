@@ -49,7 +49,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
           title: Text(
             "Doctor Details",
@@ -135,7 +135,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                               child: Text(
                                 "National Institute of Cancer Research & Hospital, (Cancer Specialist)",
                                 maxLines: 2,
-                                style: TextStyle(color: kSubTittleColor),
+                                style: TextStyle(color: kSubTitleColor),
                               ),
                             )
                           ],
@@ -227,13 +227,13 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                     "5,000+",
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
-                                        color: kTittleColor),
+                                        color: kTitleColor),
                                   ),
                                   Text(
                                     "Patient",
                                     style: TextStyle(
                                         fontWeight: FontWeight.w400,
-                                        color: kSubTittleColor),
+                                        color: kSubTitleColor),
                                   )
                                 ],
                               )
@@ -346,7 +346,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                   borderRadius: BorderRadius.circular(10),
                                   side: BorderSide(
                                       color:
-                                          kSubTittleColor.withOpacity(0.10))),
+                                          kSubTitleColor.withOpacity(0.10))),
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 8.0, right: 8.0, bottom: 16.0),
@@ -364,7 +364,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                         "Jerome Bell",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            color: kTittleColor),
+                                            color: kTitleColor),
                                       ),
                                       subtitle: RatingBarWidget(
                                         size: 14,
@@ -377,14 +377,14 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                       trailing: Text(
                                         "31 Min Ago",
                                         style:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                       ),
                                     ),
                                     Text(
                                       reviewWomen,
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          color: kSubTittleColor),
+                                          color: kSubTitleColor),
                                     )
                                   ],
                                 ),

@@ -60,7 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 textFieldType: TextFieldType.NUMBER,
                 decoration: InputDecoration(
                     labelText: "Mobile Number",
-                    labelStyle: TextStyle(color: kTittleColor),
+                    labelStyle: TextStyle(color: kTitleColor),
                     floatingLabelBehavior: FloatingLabelBehavior.never,
                     hintText: "Mobile Number",
                     border: OutlineInputBorder(
@@ -89,7 +89,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   obscuringCharacter: "*",
                   decoration: InputDecoration(
                       label: const Text("Password"),
-                      labelStyle: TextStyle(color: kTittleColor),
+                      labelStyle: TextStyle(color: kTitleColor),
                       hintText: "******",
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       border: OutlineInputBorder(
@@ -126,7 +126,7 @@ class _SignInScreenState extends State<SignInScreen> {
               RichText(
                 text: TextSpan(
                     text: "Don't have an account? ",
-                    style: TextStyle(color: kSubTittleColor),
+                    style: TextStyle(color: kSubTitleColor),
                     children: [
                       TextSpan(
                           text: "SIGN UP", style: TextStyle(color: kMainColor)),

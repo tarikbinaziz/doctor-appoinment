@@ -13,7 +13,7 @@ class VoiceCallScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: SafeArea(
@@ -67,14 +67,14 @@ class VoiceCallScreen extends StatelessWidget {
                         "Dr. Josiah Toor",
                         style: TextStyle(
                             fontSize: 24,
-                            color: kTittleColor,
+                            color: kTitleColor,
                             fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 10,),
                       Text(
                         "Calling...",
                         style: TextStyle(
-                            color: kSubTittleColor,
+                            color: kSubTitleColor,
                             ),
                       ),
                       SizedBox(height: 180,),
@@ -89,7 +89,7 @@ class VoiceCallScreen extends StatelessWidget {
                             shape: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40),
                                 borderSide: BorderSide(
-                                    color: kSubTittleColor.withOpacity(0.10))),
+                                    color: kSubTitleColor.withOpacity(0.10))),
                             child: Padding(
                               padding: const EdgeInsets.all(20.0),
                               child: Icon(
@@ -124,7 +124,7 @@ class VoiceCallScreen extends StatelessWidget {
                             shape: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40),
                                 borderSide: BorderSide(
-                                    color: kSubTittleColor.withOpacity(0.10))),
+                                    color: kSubTitleColor.withOpacity(0.10))),
                             child: Padding(
                               padding: const EdgeInsets.all(20.0),
                               child: Icon(

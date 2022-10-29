@@ -18,7 +18,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         title: Text(
           "Offline Appointments Details",
@@ -100,7 +100,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                         child: Text(
                           "National Institute of Cancer Research & Hospital, (Cancer Specialist)",
                           maxLines: 2,
-                          style: TextStyle(color: kSubTittleColor),
+                          style: TextStyle(color: kSubTitleColor),
                         ),
                       )
                     ],
@@ -155,7 +155,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                      ImageIcon(AssetImage("assets/images/ic_hospital.png"),color: kSubTittleColor),
+                      ImageIcon(AssetImage("assets/images/ic_hospital.png"),color: kSubTitleColor),
                         SizedBox(
                           width: 12,
                         ),
@@ -166,7 +166,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Hospital",
                               style: TextStyle(
-                                  color: kTittleColor,
+                                  color: kTitleColor,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16),
                             ),
@@ -176,7 +176,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "National Institute of Cancer Research & Hospital",
                               style: TextStyle(
-                                color: kSubTittleColor,
+                                color: kSubTitleColor,
                               ),
                             ),
                           ],
@@ -191,7 +191,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                       children: [
                         Icon(
                           IconlyBold.timeCircle,
-                          color: kSubTittleColor,
+                          color: kSubTitleColor,
                         ),
                         SizedBox(
                           width: 12,
@@ -203,7 +203,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Visit time",
                               style: TextStyle(
-                                  color: kTittleColor,
+                                  color: kTitleColor,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16),
                             ),
@@ -213,7 +213,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Afternoon",
                               style: TextStyle(
-                                color: kSubTittleColor,
+                                color: kSubTitleColor,
                               ),
                             ),
                             SizedBox(
@@ -222,7 +222,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Today - 12 July, 2022",
                               style: TextStyle(
-                                color: kSubTittleColor,
+                                color: kSubTitleColor,
                               ),
                             ),
                             SizedBox(
@@ -246,7 +246,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                       children: [
                         Icon(
                           IconlyBold.profile,
-                          color: kSubTittleColor,
+                          color: kSubTitleColor,
                         ),
                         SizedBox(
                           width: 12,
@@ -257,7 +257,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Patient information",
                               style: TextStyle(
-                                  color: kTittleColor,
+                                  color: kTitleColor,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16),
                             ),
@@ -277,7 +277,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "Guy Hawkins",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ),
@@ -296,7 +296,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "25",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ), SizedBox(
@@ -314,7 +314,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "Male",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ), SizedBox(
@@ -332,7 +332,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "01855671645",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ),
@@ -348,7 +348,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                       children: [
                         Icon(
                           IconlyBold.wallet,
-                          color: kSubTittleColor,
+                          color: kSubTitleColor,
                         ),
                         SizedBox(
                           width: 12,
@@ -359,7 +359,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                             Text(
                               "Consultation Fees",
                               style: TextStyle(
-                                  color: kTittleColor,
+                                  color: kTitleColor,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16),
                             ),
@@ -379,7 +379,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "Video Call",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ),
@@ -398,7 +398,7 @@ class OfflineAppoinmentDetails extends StatelessWidget {
                                 ), SizedBox(width: 24,),
                                 Text(
                                   "\$15",
-                                  style: TextStyle(color: kTittleColor),
+                                  style: TextStyle(color: kTitleColor),
                                 ),
                               ],
                             ), SizedBox(

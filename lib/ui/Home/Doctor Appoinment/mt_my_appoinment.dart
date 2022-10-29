@@ -32,7 +32,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         title: Text(
           "My Appointments",
@@ -98,7 +98,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                     Text(
                       "Today - 12 July 2022",
                       style: TextStyle(
-                          fontWeight: FontWeight.w600, color: kSubTittleColor),
+                          fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
                     SizedBox(height: 12,),
                     ListView.builder(
@@ -114,7 +114,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10),
                                 side: BorderSide(
-                                    color: kSubTittleColor.withOpacity(0.10))),
+                                    color: kSubTitleColor.withOpacity(0.10))),
                             child: Padding(
                               padding: const EdgeInsets.all(12.0),
                               child: Row(
@@ -168,7 +168,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                                               text: TextSpan(
                                                   text: calls[index],
                                                   style: TextStyle(
-                                                      color: kTittleColor),
+                                                      color: kTitleColor),
                                                   children: [
                                                     WidgetSpan(child: SizedBox(width: 6,)),
                                                     TextSpan(
@@ -195,7 +195,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                     Text(
                       "Yesterday - 11 July 2022",
                       style: TextStyle(
-                          fontWeight: FontWeight.w600, color: kSubTittleColor),
+                          fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
                     SizedBox(height: 12,),
                     ListView.builder(
@@ -211,7 +211,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   side: BorderSide(
-                                      color: kSubTittleColor.withOpacity(0.10))),
+                                      color: kSubTitleColor.withOpacity(0.10))),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -265,7 +265,7 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                                                     text: TextSpan(
                                                         text: calls[index],
                                                         style: TextStyle(
-                                                            color: kTittleColor),
+                                                            color: kTitleColor),
                                                         children: [
                                                           WidgetSpan(child: SizedBox(width: 6,)),
                                                           TextSpan(

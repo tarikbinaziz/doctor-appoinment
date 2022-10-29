@@ -79,7 +79,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
           style: ktitleTextStyle,
         ),
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         actions: [
           Container(
@@ -90,7 +90,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                   border: Border.all(color: kTextFieldBorderColor, width: 1)),
               child: Icon(
                 IconlyLight.search,
-                color: kTittleColor,
+                color: kTitleColor,
               )),
           Padding(
             padding: const EdgeInsets.all(12.0),
@@ -111,7 +111,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                   ),
                   child: Icon(
                     Icons.shopping_cart,
-                    color: kTittleColor,
+                    color: kTitleColor,
                   )),
             ),
           )
@@ -165,7 +165,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                             child: Text(
                           "View More",
                           style: TextStyle(
-                              fontWeight: FontWeight.w600, color: kTittleColor),
+                              fontWeight: FontWeight.w600, color: kTitleColor),
                         )),
                       )
                     ],
@@ -343,7 +343,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                                                       style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.w400,
-                                                          color: kTittleColor),
+                                                          color: kTitleColor),
                                                       children: [
                                                     TextSpan(
                                                         text: "(70+) ",
@@ -351,7 +351,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                                                             fontWeight:
                                                                 FontWeight.w400,
                                                             color:
-                                                                kSubTittleColor)),
+                                                                kSubTitleColor)),
                                                   ]))
                                             ],
                                           ),

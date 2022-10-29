@@ -70,7 +70,7 @@ class _PharmacyCategoriesScreenState extends State<PharmacyCategoriesScreen> {
           style: ktitleTextStyle,
         ),
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: Padding(

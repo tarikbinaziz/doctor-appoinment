@@ -16,7 +16,7 @@ class VideoCallScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: SafeArea(
@@ -78,7 +78,7 @@ class VideoCallScreen extends StatelessWidget {
                             shape: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40),
                                 borderSide: BorderSide(
-                                    color: kSubTittleColor.withOpacity(0.10))),
+                                    color: kSubTitleColor.withOpacity(0.10))),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Icon(
@@ -113,7 +113,7 @@ class VideoCallScreen extends StatelessWidget {
                             shape: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(40),
                                 borderSide: BorderSide(
-                                    color: kSubTittleColor.withOpacity(0.10))),
+                                    color: kSubTitleColor.withOpacity(0.10))),
                             child: Padding(
                               padding: const EdgeInsets.all(15.0),
                               child: Icon(

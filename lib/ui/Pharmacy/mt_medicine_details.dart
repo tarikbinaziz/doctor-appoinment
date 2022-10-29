@@ -33,7 +33,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
           actions: [
             Padding(
@@ -56,7 +56,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                     ),
                     child: Icon(
                       FeatherIcons.shoppingCart,
-                      color: kTittleColor,
+                      color: kTitleColor,
                       size: 18,
                     )),
               ),
@@ -105,7 +105,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                           "Maan Pharmacy Ltd.",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: kTittleColor,
+                              color: kTitleColor,
                               fontSize: 20),
                         ),
                         Text("(Paracetamol)", style: ksubTitleTextStyle),
@@ -116,7 +116,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                             text: TextSpan(
                                 text: '\$6.99',
                                 style: TextStyle(
-                                    color: kSubTittleColor,
+                                    color: kSubTitleColor,
                                     fontWeight: FontWeight.w600),
                                 children: [
                               WidgetSpan(
@@ -126,7 +126,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                               TextSpan(
                                 text: '\$7.99',
                                 style: TextStyle(
-                                    color: kSubTittleColor,
+                                    color: kSubTitleColor,
                                     decoration: TextDecoration.lineThrough,
                                     fontWeight: FontWeight.w400),
                               ),
@@ -176,7 +176,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                     padding: const EdgeInsets.all(4.0),
                                     child: Icon(
                                       FeatherIcons.minus,
-                                      color: kSubTittleColor,
+                                      color: kSubTitleColor,
                                     ),
                                   ),
                                 ).onTap(() {
@@ -231,8 +231,8 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                   child: Column(
                     children: [
                       ExpansionTile(
-                        collapsedTextColor: kTittleColor,
-                        collapsedIconColor: kTittleColor,
+                        collapsedTextColor: kTitleColor,
+                        collapsedIconColor: kTitleColor,
                         childrenPadding: EdgeInsets.all(8),
                         tilePadding: EdgeInsets.zero,
                         title: Text(
@@ -241,7 +241,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                         ),
                         trailing: Icon(isExpanded
                             ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTittleColor,),
+                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -254,12 +254,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                 padding: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: kSubTittleColor),
+                                    color: kSubTitleColor),
                               ),
                               SizedBox(width: 8,),
                               Text(
                                 "Pain relief",
-                                style: TextStyle(color: kSubTittleColor),
+                                style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
@@ -269,12 +269,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                 padding: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: kSubTittleColor),
+                                    color: kSubTitleColor),
                               ),
                               SizedBox(width: 8,),
                               Text(
                                 "Fever",
-                                style: TextStyle(color: kSubTittleColor),
+                                style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
@@ -282,8 +282,8 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                         ],
                       ),
                       ExpansionTile(
-                        collapsedTextColor: kTittleColor,
-                        collapsedIconColor: kTittleColor,
+                        collapsedTextColor: kTitleColor,
+                        collapsedIconColor: kTitleColor,
                         childrenPadding: EdgeInsets.all(8),
                         tilePadding: EdgeInsets.zero,
                         title: Text(
@@ -292,7 +292,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                         ),
                         trailing: Icon(isExpanded
                             ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTittleColor,),
+                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -305,12 +305,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                 padding: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: kSubTittleColor),
+                                    color: kSubTitleColor),
                               ),
                               SizedBox(width: 8,),
                               Text(
                                 "No common side effects seen",
-                                style: TextStyle(color: kSubTittleColor),
+                                style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
@@ -319,8 +319,8 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                         ],
                       ),
                       ExpansionTile(
-                        collapsedTextColor: kTittleColor,
-                        collapsedIconColor: kTittleColor,
+                        collapsedTextColor: kTitleColor,
+                        collapsedIconColor: kTitleColor,
                         childrenPadding: EdgeInsets.all(8),
                         tilePadding: EdgeInsets.zero,
                         title: Text(
@@ -329,7 +329,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                         ),
                         trailing: Icon(isExpanded
                             ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTittleColor,),
+                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -342,12 +342,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                 padding: EdgeInsets.all(5),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: kSubTittleColor),
+                                    color: kSubTitleColor),
                               ),
                               SizedBox(width: 8,),
                               Text(
                                 napaDetails,
-                                style: TextStyle(color: kSubTittleColor),
+                                style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),

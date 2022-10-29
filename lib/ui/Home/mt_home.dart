@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 child: Icon(
                   IconlyLight.notification,
-                  color: kTittleColor,
+                  color: kTitleColor,
                 )),
           ).onTap(() => NotificationsScreen().launch(context)),
         ),
@@ -93,10 +93,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderSide: BorderSide.none),
                     prefixIcon: Icon(
                       IconlyLight.search,
-                      color: kTittleColor,
+                      color: kTitleColor,
                     ),
                     hintText: "Search...",
-                    hintStyle: TextStyle(color: kSubTittleColor),
+                    hintStyle: TextStyle(color: kSubTitleColor),
                     filled: true,
                     fillColor: kTextFieldColor),
               ),
@@ -271,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                           side: BorderSide(
-                              color: kSubTittleColor.withOpacity(0.10))),
+                              color: kSubTitleColor.withOpacity(0.10))),
                       child: Padding(
                         padding: const EdgeInsets.only(
                             left: 8.0, right: 8.0, bottom: 8.0),
@@ -352,7 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 allDoctors[index].ratings ?? '',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                             children: [
                                           WidgetSpan(
                                               child: SizedBox(
@@ -362,7 +362,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               text: "(100+ Ratings)",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w400,
-                                                  color: kSubTittleColor)),
+                                                  color: kSubTitleColor)),
                                         ]))
                                   ],
                                 ),
@@ -386,7 +386,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     '',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                             children: [
                                           WidgetSpan(
                                               child: SizedBox(
@@ -396,7 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               text: "Year Exp ",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w400,
-                                                  color: kSubTittleColor)),
+                                                  color: kSubTitleColor)),
                                         ]))
                                   ],
                                 ),
@@ -454,7 +454,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                           side: BorderSide(
-                              color: kSubTittleColor.withOpacity(0.10))),
+                              color: kSubTitleColor.withOpacity(0.10))),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -473,7 +473,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               "Covid RT PCR",
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
-                                  color: kTittleColor),
+                                  color: kTitleColor),
                             ),
                             SizedBox(
                               height: 6,
@@ -483,7 +483,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 "Known as Covid-19 Virus\nQuantitaticve Pcr",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
-                                    color: kSubTittleColor),
+                                    color: kSubTitleColor),
                               ),
                             ),
                             SizedBox(
@@ -549,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             side: BorderSide(
-                                color: kSubTittleColor.withOpacity(0.10))),
+                                color: kSubTitleColor.withOpacity(0.10))),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
@@ -610,7 +610,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         TextSpan(
                                             text: "\$6.99",
                                             style: TextStyle(
-                                                color: kSubTittleColor,
+                                                color: kSubTitleColor,
                                                 decoration:
                                                     TextDecoration.lineThrough))
                                       ])),

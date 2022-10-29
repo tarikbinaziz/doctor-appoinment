@@ -17,7 +17,7 @@ class VideoCallTimeOutScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: SafeArea(
@@ -49,14 +49,14 @@ class VideoCallTimeOutScreen extends StatelessWidget {
                         "Dr. Josiah Toor",
                         style: TextStyle(
                             fontSize: 24,
-                            color: kTittleColor,
+                            color: kTitleColor,
                             fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 10,),
                       Text(
                         "Time end for video calling appointment",
                         style: TextStyle(
-                          color: kSubTittleColor,
+                          color: kSubTitleColor,
                         ),
                       ),
                       Text(

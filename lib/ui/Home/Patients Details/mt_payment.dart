@@ -51,7 +51,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         title: Text(
           "Payment",
@@ -89,7 +89,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               "Congratulation!",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: kTittleColor,
+                                  color: kTitleColor,
                                   fontSize: 28),
                             ),
                             SizedBox(
@@ -107,7 +107,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                       TextSpan(
                                         text: " will video call",
                                         style:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                       )
                                     ])),
                             SizedBox(
@@ -130,7 +130,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                             "Guy Hawkins",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                           ),
                                         ],
                                       ),
@@ -147,7 +147,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                             "12 July 2022",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                           ),
                                         ],
                                       ),
@@ -170,7 +170,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                             "\$15 USD",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                           ),
                                         ],
                                       ),
@@ -187,7 +187,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                             "01:00 PM",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w500,
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                           ),
                                         ],
                                       ),
@@ -336,29 +336,29 @@ class _PaymentScreenState extends State<PaymentScreen> {
                         border: OutlineInputBorder(),
                         labelText: 'Name',
                         hintText: 'Enter card holder name',
-                        labelStyle: TextStyle(color: kTittleColor),
-                        hintStyle: TextStyle(color: kSubTittleColor),
+                        labelStyle: TextStyle(color: kTitleColor),
+                        hintStyle: TextStyle(color: kSubTitleColor),
                       ),
                       cardNumberDecoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Card Number',
                         hintText: 'Enter card Number',
-                        labelStyle: TextStyle(color: kTittleColor),
-                        hintStyle: TextStyle(color: kSubTittleColor),
+                        labelStyle: TextStyle(color: kTitleColor),
+                        hintStyle: TextStyle(color: kSubTitleColor),
                       ),
                       expiryDateDecoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Expired Date',
                         hintText: 'DD - MM - YYYY',
-                        labelStyle: TextStyle(color: kTittleColor),
-                        hintStyle: TextStyle(color: kSubTittleColor),
+                        labelStyle: TextStyle(color: kTitleColor),
+                        hintStyle: TextStyle(color: kSubTitleColor),
                       ),
                       cvvCodeDecoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'CVV',
                         hintText: 'Enter CVV number',
-                        labelStyle: TextStyle(color: kTittleColor),
-                        hintStyle: TextStyle(color: kSubTittleColor),
+                        labelStyle: TextStyle(color: kTitleColor),
+                        hintStyle: TextStyle(color: kSubTitleColor),
                       ),
                       cardNumber: '3754 9000 0800 9735',
                       expiryDate: '05/31',

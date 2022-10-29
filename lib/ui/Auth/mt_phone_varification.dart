@@ -176,7 +176,7 @@ class _PhoneVarificationScreenState extends State<PhoneVarificationScreen> {
                   text: TextSpan(
                       text: "You can request OTP after ",
                       style: TextStyle(
-                          fontWeight: FontWeight.w400, color: kSubTittleColor),
+                          fontWeight: FontWeight.w400, color: kSubTitleColor),
                       children: [
                         TextSpan(
                           text: "01:52",

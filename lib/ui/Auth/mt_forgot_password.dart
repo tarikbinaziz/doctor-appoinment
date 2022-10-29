@@ -39,9 +39,9 @@ class _ForgotPasswordScreentate extends State<ForgotPasswordScreen> {
                 textFieldType: TextFieldType.EMAIL,
                 decoration: InputDecoration(
                     label: Text("Email"),
-                    labelStyle: TextStyle(color: kTittleColor),
+                    labelStyle: TextStyle(color: kTitleColor),
                     hintText: "janecooper@gmail.com",
-                    hintStyle: TextStyle(color: kSubTittleColor),
+                    hintStyle: TextStyle(color: kSubTitleColor),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     border: OutlineInputBorder(
                         borderSide: BorderSide(color: kTextFieldBorderColor)))),

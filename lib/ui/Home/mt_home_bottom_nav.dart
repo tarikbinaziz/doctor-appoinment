@@ -1,13 +1,11 @@
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
-import 'package:maan_doctor_appoinment/ui/Home/mt_cart.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_history.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_home.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_profile.dart';
+import '../Cart/mt_cart.dart';
 
 class HomeBottomNavBarScreen extends StatefulWidget {
   const HomeBottomNavBarScreen({Key? key}) : super(key: key);
@@ -32,7 +30,7 @@ class _HomeBottomNavBarScreenState extends State<HomeBottomNavBarScreen> {
       body: pages.elementAt(currentIndex),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: kMainColor,
-        unselectedItemColor: kSubTittleColor,
+        unselectedItemColor: kSubTitleColor,
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),

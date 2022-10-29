@@ -42,7 +42,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "Skip",
-                  style: TextStyle(color: kSubTittleColor),
+                  style: TextStyle(color: kSubTitleColor),
                 ).onTap(() => const ChooseARoleScreen().launch(context)),
               ),
             ),
@@ -75,7 +75,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
-                            color: kTittleColor,
+                            color: kTitleColor,
                           ),
                         ),
                         const SizedBox(
@@ -86,7 +86,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.w400,
-                            color: kSubTittleColor,
+                            color: kSubTitleColor,
                             height: 1.5,
                             fontSize: 14,
                           ),

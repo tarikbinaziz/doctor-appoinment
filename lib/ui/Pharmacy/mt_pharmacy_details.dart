@@ -51,7 +51,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
             backgroundColor: Colors.transparent,
             elevation: 0.0,
             leading: BackButton(
-              color: kTittleColor,
+              color: kTitleColor,
             ),
             actions: [
               Padding(
@@ -90,7 +90,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                       ),
                       child: Icon(
                         FeatherIcons.shoppingCart,
-                        color: kTittleColor,
+                        color: kTitleColor,
                         size: 18,
                       )),
                 ),
@@ -152,12 +152,12 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                 RichText(
                                     text: TextSpan(
                                         text: " 4.5 ",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                         children: [
                                       TextSpan(
                                         text: "(70+)",
                                         style:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                       )
                                     ])),
                               ],
@@ -252,7 +252,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                           isScrollable: true,
                           controller: _tabController,
                           labelColor: kBadgeColor,
-                          unselectedLabelColor: kSubTittleColor,
+                          unselectedLabelColor: kSubTitleColor,
                           indicatorColor: kBadgeColor,
                         ),
                         Expanded(
@@ -272,11 +272,11 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                             borderSide: BorderSide.none),
                                         prefixIcon: Icon(
                                           IconlyLight.search,
-                                          color: kTittleColor,
+                                          color: kTitleColor,
                                         ),
                                         hintText: "Search...",
                                         hintStyle:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                         filled: true,
                                         fillColor: kTextFieldColor),
                                   ),
@@ -345,7 +345,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                               Text(
                                                 "(Paracetamol)",
                                                 style: TextStyle(
-                                                    color: kSubTittleColor),
+                                                    color: kSubTitleColor),
                                               ),
                                               const SizedBox(
                                                 height: 6,
@@ -355,7 +355,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                       text: 'MRP',
                                                       style: TextStyle(
                                                           color:
-                                                              kSubTittleColor),
+                                                              kSubTitleColor),
                                                       children: [
                                                     TextSpan(
                                                       text: ' \$6.99 ',
@@ -366,7 +366,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                       text: ' \$7.9 ',
                                                       style: TextStyle(
                                                           color:
-                                                              kSubTittleColor,
+                                                              kSubTitleColor,
                                                           decoration:
                                                               TextDecoration
                                                                   .lineThrough),
@@ -433,7 +433,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
                                   ),
@@ -450,7 +450,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
                                   ),
@@ -467,7 +467,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
                                   ), SizedBox(
@@ -483,7 +483,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
                                   ), SizedBox(
@@ -499,7 +499,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
                                   ), SizedBox(
@@ -515,10 +515,10 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                       ),
                                       Text(
                                         "10:00 AM - 10:00 PM",
-                                        style: TextStyle(color: kTittleColor),
+                                        style: TextStyle(color: kTitleColor),
                                       ),
                                     ],
-                                  ), SizedBox(
+                                  ), const SizedBox(
                                     height: 16,
                                   ),
                                   Row(
@@ -577,7 +577,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                            borderRadius: BorderRadius.circular(10),
                                            side: BorderSide(
                                                color:
-                                               kSubTittleColor.withOpacity(0.10))),
+                                               kSubTitleColor.withOpacity(0.10))),
                                        child: Padding(
                                          padding: const EdgeInsets.only(
                                              left: 8.0, right: 8.0, bottom: 16.0),
@@ -595,7 +595,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                  "Jerome Bell",
                                                  style: TextStyle(
                                                      fontWeight: FontWeight.w500,
-                                                     color: kTittleColor),
+                                                     color: kTitleColor),
                                                ),
                                                subtitle: RatingBarWidget(
                                                  size: 14,
@@ -608,14 +608,14 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                trailing: Text(
                                                  "31 Min Ago",
                                                  style:
-                                                 TextStyle(color: kSubTittleColor),
+                                                 TextStyle(color: kSubTitleColor),
                                                ),
                                              ),
                                              Text(
                                                reviewWomen,
                                                style: TextStyle(
                                                    fontWeight: FontWeight.w400,
-                                                   color: kSubTittleColor),
+                                                   color: kSubTitleColor),
                                              )
                                            ],
                                          ),

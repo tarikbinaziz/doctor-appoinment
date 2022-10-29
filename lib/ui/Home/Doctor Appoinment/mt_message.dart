@@ -18,7 +18,7 @@ class MessagingScreen extends StatelessWidget {
           leadingWidth: 30,
           elevation: 0,
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
           title: ListTile(
             contentPadding: EdgeInsets.zero,

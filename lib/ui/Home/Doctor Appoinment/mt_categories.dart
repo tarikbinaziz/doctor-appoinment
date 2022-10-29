@@ -55,7 +55,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
           style: ktitleTextStyle,
         ),
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: Padding(

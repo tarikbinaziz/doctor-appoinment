@@ -45,7 +45,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
           title: Text(
             "Book Appointment",
@@ -137,7 +137,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                 padding: EdgeInsets.all(12),
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                      color: kSubTittleColor.withOpacity(0.10)),
+                                      color: kSubTitleColor.withOpacity(0.10)),
                                   borderRadius: BorderRadius.circular(6.0),
                                   color: kLikeWhiteColor,
                                 ),
@@ -146,13 +146,13 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                     Text(
                                       day[index],
                                       style: TextStyle(
-                                          color: kSubTittleColor,
+                                          color: kSubTitleColor,
                                           fontWeight: FontWeight.w400),
                                     ),
                                     Text(
                                       number[index].toString(),
                                       style: TextStyle(
-                                          color: kSubTittleColor,
+                                          color: kSubTitleColor,
                                           fontWeight: FontWeight.w700),
                                     ),
                                   ],
@@ -177,7 +177,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               padding: EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    color: kSubTittleColor.withOpacity(0.10)),
+                                    color: kSubTitleColor.withOpacity(0.10)),
                                 borderRadius: BorderRadius.circular(6.0),
                                 color: kLikeWhiteColor,
                               ),
@@ -187,7 +187,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                 children: [
                                   Icon(
                                     Icons.sunny,
-                                    color: kSubTittleColor,
+                                    color: kSubTitleColor,
                                   ),
                                   SizedBox(
                                     width: 2,
@@ -195,7 +195,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                   Text(
                                     "Morning",
                                     style: TextStyle(
-                                        color: kSubTittleColor,
+                                        color: kSubTitleColor,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ],
@@ -205,7 +205,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               padding: EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    color: kSubTittleColor.withOpacity(0.10)),
+                                    color: kSubTitleColor.withOpacity(0.10)),
                                 borderRadius: BorderRadius.circular(6.0),
                                 color: kLikeWhiteColor,
                               ),
@@ -216,7 +216,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                   ImageIcon(
                                     AssetImage(
                                         "assets/images/afternoonicon.png"),
-                                    color: kSubTittleColor,
+                                    color: kSubTitleColor,
                                   ),
                                   SizedBox(
                                     width: 2,
@@ -224,7 +224,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                   Text(
                                     "Afternoon",
                                     style: TextStyle(
-                                        color: kSubTittleColor,
+                                        color: kSubTitleColor,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ],
@@ -234,7 +234,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               padding: EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 border: Border.all(
-                                    color: kSubTittleColor.withOpacity(0.10)),
+                                    color: kSubTitleColor.withOpacity(0.10)),
                                 borderRadius: BorderRadius.circular(6.0),
                                 color: kLikeWhiteColor,
                               ),
@@ -244,7 +244,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                 children: [
                                   ImageIcon(
                                     AssetImage("assets/images/eveningicon.png"),
-                                    color: kSubTittleColor,
+                                    color: kSubTitleColor,
                                   ),
                                   SizedBox(
                                     width: 2,
@@ -252,7 +252,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                   Text(
                                     "Evening",
                                     style: TextStyle(
-                                        color: kSubTittleColor,
+                                        color: kSubTitleColor,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ],
@@ -278,7 +278,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                               return Container(
                                 decoration: BoxDecoration(
                                   border: Border.all(
-                                      color: kSubTittleColor.withOpacity(0.10)),
+                                      color: kSubTitleColor.withOpacity(0.10)),
                                   borderRadius: BorderRadius.circular(6.0),
                                   color: kLikeWhiteColor,
                                 ),
@@ -286,7 +286,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                                   child: Text(
                                     times[index],
                                     style: TextStyle(
-                                        color: kSubTittleColor,
+                                        color: kSubTitleColor,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ),
@@ -306,7 +306,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: kSubTittleColor.withOpacity(0.10)),
+                                color: kSubTitleColor.withOpacity(0.10)),
                             borderRadius: BorderRadius.circular(8.0),
                             color: kLikeWhiteColor,
                           ),
@@ -342,7 +342,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: kSubTittleColor.withOpacity(0.10)),
+                                color: kSubTitleColor.withOpacity(0.10)),
                             borderRadius: BorderRadius.circular(8.0),
                             color: kLikeWhiteColor,
                           ),
@@ -378,7 +378,7 @@ class _BookAppoinmentState extends State<BookAppoinment> {
                         Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                                color: kSubTittleColor.withOpacity(0.10)),
+                                color: kSubTitleColor.withOpacity(0.10)),
                             borderRadius: BorderRadius.circular(8.0),
                             color: kLikeWhiteColor,
                           ),

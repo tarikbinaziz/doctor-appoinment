@@ -22,7 +22,7 @@ class NearByPharmacyScreen extends StatelessWidget {
             style: ktitleTextStyle,
           ),
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
         ),
         body: Padding(
@@ -115,7 +115,7 @@ class NearByPharmacyScreen extends StatelessWidget {
                                         " 4.5 ",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            color: kTittleColor),
+                                            color: kTitleColor),
                                       )
                                     ],
                                   ),

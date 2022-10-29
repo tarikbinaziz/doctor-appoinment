@@ -19,7 +19,7 @@ class WriteReviewScreen extends StatelessWidget {
         ),
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       bottomNavigationBar: Padding(
@@ -72,7 +72,7 @@ class WriteReviewScreen extends StatelessWidget {
                         child: Text(
                           "haw was your exprience with",
                           style: TextStyle(
-                            color: kSubTittleColor,
+                            color: kSubTitleColor,
                           ),
                         ),
                       ),
@@ -92,7 +92,7 @@ class WriteReviewScreen extends StatelessWidget {
                       Text(
                         "Select Rating",
                         style: TextStyle(
-                            color: kTittleColor, fontWeight: FontWeight.w600),
+                            color: kTitleColor, fontWeight: FontWeight.w600),
                       ),
                       const SizedBox(
                         height: 10,
@@ -102,7 +102,7 @@ class WriteReviewScreen extends StatelessWidget {
                         itemCount: 5,
                         rating: 4,
                         activeColor: kStarColor,
-                        inActiveColor: kSubTittleColor,
+                        inActiveColor: kSubTitleColor,
                       ),
                       const SizedBox(
                         height: 26,
@@ -111,9 +111,9 @@ class WriteReviewScreen extends StatelessWidget {
                           textFieldType: TextFieldType.MULTILINE,
                           decoration: InputDecoration(
                               label: const Text("Write a Comment"),
-                              labelStyle: TextStyle(color: kTittleColor),
+                              labelStyle: TextStyle(color: kTitleColor),
                               hintText: "Enter card holder name",
-                              hintStyle: TextStyle(color: kSubTittleColor),
+                              hintStyle: TextStyle(color: kSubTitleColor),
                               floatingLabelBehavior:
                                   FloatingLabelBehavior.always,
                               border: OutlineInputBorder(

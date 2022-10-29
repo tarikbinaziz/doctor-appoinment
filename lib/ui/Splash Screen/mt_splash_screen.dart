@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(height: context.height()/2.2,),
             Image.asset("assets/images/logo.png"),
             const Spacer(),
-            Text("version",style: TextStyle(fontWeight: FontWeight.w400,color: kTittleColor),),
+            Text("version",style: TextStyle(fontWeight: FontWeight.w400,color: kTitleColor),),
             Text("1.0.0",style: TextStyle(fontWeight: FontWeight.w700,color: kMainColor),),
           ],
         ),

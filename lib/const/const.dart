@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 Color kMainColor = const Color(0xFF4C5DF4);
-Color kTittleColor = const Color(0xFF0C1037);
-Color kSubTittleColor = const Color(0xFF6E7682);
+Color kTitleColor = const Color(0xFF0C1037);
+Color kSubTitleColor = const Color(0xFF6E7682);
 Color kLikeWhiteColor = const Color(0xFFFFFFFF);
 Color kElevatedButtonTextColor = const Color(0xFFFFFCF9);
 Color kTextFieldBorderColor = const Color(0xFFE4E5E7);

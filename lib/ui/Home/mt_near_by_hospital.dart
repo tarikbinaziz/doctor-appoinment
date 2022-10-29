@@ -20,7 +20,7 @@ class NearByHospitalScreen extends StatelessWidget {
             style: ktitleTextStyle,
           ),
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
         ),
         body: Padding(
@@ -90,13 +90,13 @@ class NearByHospitalScreen extends StatelessWidget {
                                               text: " 4.5 ",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w400,
-                                                  color: kTittleColor),
+                                                  color: kTitleColor),
                                               children: [
                                             TextSpan(
                                                 text: "(100+ Ratings) ",
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w400,
-                                                    color: kSubTittleColor)),
+                                                    color: kSubTitleColor)),
                                           ]))
                                     ],
                                   ),

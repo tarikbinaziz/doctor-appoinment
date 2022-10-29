@@ -38,7 +38,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
             style: ktitleTextStyle,
           ),
           leading: BackButton(
-            color: kTittleColor,
+            color: kTitleColor,
           ),
         ),
 
@@ -58,10 +58,10 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                           borderSide: BorderSide.none),
                       prefixIcon: Icon(
                         IconlyLight.search,
-                        color: kTittleColor,
+                        color: kTitleColor,
                       ),
                       hintText: "Search...",
-                      hintStyle: TextStyle(color: kSubTittleColor),
+                      hintStyle: TextStyle(color: kSubTitleColor),
                       filled: true,
                       fillColor: kTextFieldColor),
                 ),
@@ -84,7 +84,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                     child: Text(
                       "first",
                       style: TextStyle(
-                          fontWeight: FontWeight.w600, color: kSubTittleColor),
+                          fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
                   ),
                 ),
@@ -101,7 +101,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                           side: BorderSide(
-                              color: kSubTittleColor.withOpacity(0.10))),
+                              color: kSubTitleColor.withOpacity(0.10))),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Column(
@@ -151,14 +151,14 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                         text: TextSpan(
                                             text: "Working at: ",
                                             style: TextStyle(
-                                                color: kTittleColor),
+                                                color: kTitleColor),
                                             children: [
                                           TextSpan(
                                             text:
                                                 "${allDoctors[index].location}" ??
                                                     '',
                                             style: TextStyle(
-                                                color: kSubTittleColor),
+                                                color: kSubTitleColor),
                                           )
                                         ]))
                                   ],
@@ -191,7 +191,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                       Text(
                                         allDoctors[index].ratings ?? '',
                                         style:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                       ),
                                       const SizedBox(
                                         width: 4,
@@ -200,7 +200,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                                         "(${allDoctors[index].ratingCount})" ??
                                             '',
                                         style:
-                                            TextStyle(color: kSubTittleColor),
+                                            TextStyle(color: kSubTitleColor),
                                       ),
                                     ],
                                   ),

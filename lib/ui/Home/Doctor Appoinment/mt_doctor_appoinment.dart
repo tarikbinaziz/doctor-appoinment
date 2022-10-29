@@ -75,7 +75,7 @@ class DoctorAppoinmentScreen extends StatelessWidget {
           style: ktitleTextStyle,
         ),
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         actions: [
           Padding(
@@ -96,7 +96,7 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                 ),
                 child: Icon(
                   IconlyLight.notification,
-                  color: kTittleColor,
+                  color: kTitleColor,
                 ),
               ),
             ),
@@ -118,10 +118,10 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                         borderSide: BorderSide.none),
                     prefixIcon: Icon(
                       IconlyLight.search,
-                      color: kTittleColor,
+                      color: kTitleColor,
                     ),
                     hintText: "Search...",
-                    hintStyle: TextStyle(color: kSubTittleColor),
+                    hintStyle: TextStyle(color: kSubTitleColor),
                     filled: true,
                     fillColor: kTextFieldColor),
               ),
@@ -187,7 +187,7 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                                       "See Doctor",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w600,
-                                          color: kTittleColor),
+                                          color: kTitleColor),
                                     )),
                               )
                             ],
@@ -270,7 +270,7 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                               side: BorderSide(
-                                  color: kSubTittleColor.withOpacity(0.10))),
+                                  color: kSubTitleColor.withOpacity(0.10))),
                           child: Padding(
                             padding: const EdgeInsets.only(
                                 left: 8.0, right: 8.0, bottom: 8.0),
@@ -350,14 +350,14 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                                                 text:  allDoctors[index].ratings ?? '',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w400,
-                                                    color: kTittleColor),
+                                                    color: kTitleColor),
                                                 children: [
                                                   WidgetSpan(child: SizedBox(width: 5,)),
                                                   TextSpan(
                                                       text:  "(100+ Ratings)",
                                                       style: TextStyle(
                                                           fontWeight: FontWeight.w400,
-                                                          color: kSubTittleColor)),
+                                                          color: kSubTitleColor)),
                                                 ]))
                                       ],
                                     ),
@@ -375,14 +375,14 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                                                 text:  allDoctors[index].experience ?? '',
                                                 style: TextStyle(
                                                     fontWeight: FontWeight.w400,
-                                                    color: kTittleColor),
+                                                    color: kTitleColor),
                                                 children: [
                                                   WidgetSpan(child: SizedBox(width: 6,)),
                                                   TextSpan(
                                                       text: "Year Exp ",
                                                       style: TextStyle(
                                                           fontWeight: FontWeight.w400,
-                                                          color: kSubTittleColor)),
+                                                          color: kSubTitleColor)),
                                                 ]))
                                       ],
                                     ),
@@ -496,13 +496,13 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                                                     text: " 4.5 ",
                                                     style: TextStyle(
                                                         fontWeight: FontWeight.w400,
-                                                        color: kTittleColor),
+                                                        color: kTitleColor),
                                                     children: [
                                                       TextSpan(
                                                           text: "(100+ Ratings) ",
                                                           style: TextStyle(
                                                               fontWeight: FontWeight.w400,
-                                                              color: kSubTittleColor)),
+                                                              color: kSubTitleColor)),
                                                     ]))
                                           ],
                                         ),

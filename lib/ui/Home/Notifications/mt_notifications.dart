@@ -22,7 +22,7 @@ class NotificationsScreen extends StatelessWidget {
         backgroundColor: kLikeWhiteColor,
         elevation: 0,
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
         title: Text(
           "Notifications",
@@ -38,7 +38,7 @@ class NotificationsScreen extends StatelessWidget {
               Text(
                 "Today - 12 July 2022",
                 style: TextStyle(
-                    fontWeight: FontWeight.w600, color: kSubTittleColor),
+                    fontWeight: FontWeight.w600, color: kSubTitleColor),
               ),
               SizedBox(height: 12.0,),
               ListView.builder(
@@ -54,7 +54,7 @@ class NotificationsScreen extends StatelessWidget {
                     color: kLikeWhiteColor,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: kSubTittleColor.withOpacity(0.10))),
+                        side: BorderSide(color: kSubTitleColor.withOpacity(0.10))),
                     child: ListTile(
                       leading: Container(
                         padding: EdgeInsets.all(15),
@@ -69,12 +69,12 @@ class NotificationsScreen extends StatelessWidget {
                       title: Text(
                         tittleName[index],
                         style: TextStyle(
-                            fontWeight: FontWeight.w600, color: kTittleColor),
+                            fontWeight: FontWeight.w600, color: kTitleColor),
                       ),
                       subtitle: Text(
                         subTittle[index],
                         style: TextStyle(
-                            fontWeight: FontWeight.w400, color: kSubTittleColor),
+                            fontWeight: FontWeight.w400, color: kSubTitleColor),
                       ),
                     ),
                   ),
@@ -85,7 +85,7 @@ class NotificationsScreen extends StatelessWidget {
               Text(
                 "Yesterday - 11 July 2022",
                 style: TextStyle(
-                    fontWeight: FontWeight.w600, color: kSubTittleColor),
+                    fontWeight: FontWeight.w600, color: kSubTitleColor),
               ),
               SizedBox(height: 12.0,),
               ListView.builder(
@@ -101,7 +101,7 @@ class NotificationsScreen extends StatelessWidget {
                         color: kLikeWhiteColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(color: kSubTittleColor.withOpacity(0.10))),
+                            side: BorderSide(color: kSubTitleColor.withOpacity(0.10))),
                         child: ListTile(
                           leading: Container(
                             padding: EdgeInsets.all(15),
@@ -116,12 +116,12 @@ class NotificationsScreen extends StatelessWidget {
                           title: Text(
                             tittleName[index],
                             style: TextStyle(
-                                fontWeight: FontWeight.w600, color: kTittleColor),
+                                fontWeight: FontWeight.w600, color: kTitleColor),
                           ),
                           subtitle: Text(
                             subTittle[index],
                             style: TextStyle(
-                                fontWeight: FontWeight.w400, color: kSubTittleColor),
+                                fontWeight: FontWeight.w400, color: kSubTitleColor),
                           ),
                         ),
                       ),

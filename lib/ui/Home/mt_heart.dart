@@ -19,7 +19,7 @@ class HeartScreen extends StatelessWidget {
           style: ktitleTextStyle,
         ),
         leading: BackButton(
-          color: kTittleColor,
+          color: kTitleColor,
         ),
       ),
       body: Padding(
@@ -38,7 +38,7 @@ class HeartScreen extends StatelessWidget {
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
-                        side: BorderSide(color: kSubTittleColor.withOpacity(0.10))),
+                        side: BorderSide(color: kSubTitleColor.withOpacity(0.10))),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
@@ -77,9 +77,9 @@ class HeartScreen extends StatelessWidget {
                                         text: TextSpan(
                                             text:
                                             "Working at: ",
-                                            style: TextStyle(color: kTittleColor),
+                                            style: TextStyle(color: kTitleColor),
                                             children: [
-                                              TextSpan(text: " New York, USA",style: TextStyle(color: kSubTittleColor))
+                                              TextSpan(text: " New York, USA",style: TextStyle(color: kSubTitleColor))
                                             ])),
 
 
@@ -99,7 +99,7 @@ class HeartScreen extends StatelessWidget {
                                   children: [
                                     Icon(IconlyBold.star,color: kStarColor,size: 16,),
                                     SizedBox(width: 4,),
-                                    Text("4.9 (60)",style: TextStyle(color: kSubTittleColor),),
+                                    Text("4.9 (60)",style: TextStyle(color: kSubTitleColor),),
 
                                   ],),
                               ),
