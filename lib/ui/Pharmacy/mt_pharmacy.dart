@@ -4,9 +4,11 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_near_by_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy_categories.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_upload_prescription.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/const.dart';
+import '../Cart/mt_cart.dart';
 import '../Styles/style.dart';
 import '../Home/Doctor Appoinment/mt_categories.dart';
 import '../Home/Doctor Appoinment/mt_popular_doctor.dart';
@@ -116,6 +118,23 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
             ),
           )
         ],
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(14.0),
+        child: AppButton(
+          text: "Upload Prescription",
+          textColor: kLikeWhiteColor,
+          elevation: 0,
+          color: kMainColor,
+          onTap: () {
+            UploadPrescriptionScreen().launch(context);
+    }
+          ,
+          //  padding: EdgeInsets.zero,
+          shapeBorder: OutlineInputBorder(
+              borderSide: BorderSide.none,
+              borderRadius: BorderRadius.circular(6)),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(

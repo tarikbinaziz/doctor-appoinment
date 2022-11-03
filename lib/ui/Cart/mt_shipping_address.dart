@@ -1,9 +1,7 @@
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dropdown.dart';
 import 'package:country_pickers/utils/utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -320,7 +318,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                                   fontWeight: FontWeight.w600,
                                                   color: kTitleColor),
                                             ), Text(
-                                              "Change",
+                                              "Edit",
                                               style: TextStyle(
                                                   color: kBadgeColor),
                                             ),

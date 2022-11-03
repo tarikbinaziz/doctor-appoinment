@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:maan_doctor_appoinment/ui/Cart/mt_confirm_order.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_shipping_address.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_payment.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/const.dart';
+import 'mt_payment_method.dart';
 
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({Key? key}) : super(key: key);
@@ -77,7 +80,7 @@ class CheckOutScreenState extends State<CheckOutScreen> {
               enableScaleAnimation: false,
               elevation: 0,
               color: kMainColor,
-              onTap: () => ShippingAddress().launch(context),
+              onTap: () => ConfirmOrderScreen().launch(context),
               //  padding: EdgeInsets.zero,
               shapeBorder: OutlineInputBorder(
                   borderSide: BorderSide.none,
@@ -140,7 +143,7 @@ class CheckOutScreenState extends State<CheckOutScreen> {
                             "Change",
                             style: TextStyle(
                                 color: kBadgeColor),
-                          ),
+                          ).onTap(()=> ShippingAddress().launch(context)),
 
                         ],
                       ),
@@ -168,7 +171,7 @@ class CheckOutScreenState extends State<CheckOutScreen> {
                     Text(
                       "Change",
                       style: TextStyle(color: kBadgeColor),
-                    ),
+                    ).onTap(()=> PaymentMethodScreen().launch(context)),
                   ],
                 ),
                 const SizedBox(

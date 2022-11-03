@@ -29,6 +29,7 @@ Color kStripeContainerColor = const Color(0xFF2682FF);
 Color kShadowColor = const Color(0xFF473232);
 Color kTruckColor = const Color(0xFF12B289);
 Color kCartColor = const Color(0xFFCAFFCD);
+Color kDividerColor = const Color(0xFFDEDEE0);
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(vertical: 5),

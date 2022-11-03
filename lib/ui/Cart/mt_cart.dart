@@ -302,7 +302,7 @@ class _CartScreenState extends State<CartScreen> {
                                 style: TextStyle(color: kSubTitleColor),
                               ),
                               Text(
-                                "Free",
+                                "\$2.00",
                                 style: TextStyle(color: kTitleColor),
                               )
                             ],
