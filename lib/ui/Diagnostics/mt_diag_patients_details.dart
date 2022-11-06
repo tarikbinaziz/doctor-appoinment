@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_payment.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../../const/const.dart';
 import '../Styles/style.dart';
 import 'mt_diag_payment.dart';

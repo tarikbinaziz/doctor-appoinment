@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_confirm_order.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_shipping_address.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_payment.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 
 import 'package:nb_utils/nb_utils.dart';

@@ -1,13 +1,8 @@
 import 'package:date_picker_timeline/date_picker_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_patients_details.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
-import '../Home/Doctor Appoinment/mt_Offline_Appointments_Details.dart';
 import '../Home/Doctor Appoinment/mt_message.dart';
-import '../Home/Doctor Appoinment/mt_online_appoinment_details.dart';
-import '../Home/Doctor Appoinment/mt_video_call.dart';
-import '../Home/Doctor Appoinment/mt_voice_call.dart';
 import '../Styles/style.dart';
 import 'mt_diag_patients_details.dart';
 
