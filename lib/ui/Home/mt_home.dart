@@ -8,6 +8,7 @@ import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../model/mt_doctor_model.dart';
+import '../Diagnostics/mt_diagnostics.dart';
 import 'Doctor Appoinment/mt_popular_doctor.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -164,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
+                    ).onTap(()=>DiagnosticsScreen().launch(context)),
                   ),
                   SizedBox(
                     width: 12,

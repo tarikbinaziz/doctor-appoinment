@@ -30,6 +30,7 @@ Color kShadowColor = const Color(0xFF473232);
 Color kTruckColor = const Color(0xFF12B289);
 Color kCartColor = const Color(0xFFCAFFCD);
 Color kDividerColor = const Color(0xFFDEDEE0);
+Color kDaigLungsBGColor = const Color(0xFF4CC4E0);
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(vertical: 5),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:nb_utils/nb_utils.dart';
-import '../../const/const.dart';
-import '../Styles/style.dart';
+import '../../../const/const.dart';
+import '../../Styles/style.dart';
 
 class HeartScreen extends StatelessWidget {
   const HeartScreen({Key? key}) : super(key: key);

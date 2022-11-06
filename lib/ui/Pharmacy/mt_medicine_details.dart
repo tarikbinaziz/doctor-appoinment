@@ -7,7 +7,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/const.dart';
-import '../Home/Patients Details/mt_patients_details.dart';
+import '../Home/Doctor Appoinment/mt_patients_details.dart';
 
 class MedicineDetailsScreen extends StatefulWidget {
   const MedicineDetailsScreen({Key? key}) : super(key: key);
@@ -80,7 +80,7 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
         children: [
           Container(
             height: 270,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/images/napa-big.png'),
                     fit: BoxFit.fill)),

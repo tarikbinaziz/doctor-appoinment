@@ -48,7 +48,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
       body: Container(
         decoration: BoxDecoration(
             color: kbigContainerColor,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             )),
@@ -69,8 +69,8 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                     child: Row(
                       children: [
                         Container(
-                          padding: EdgeInsets.all(50),
-                          decoration: BoxDecoration(
+                          padding: const EdgeInsets.all(50),
+                          decoration: const BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage("assets/images/napa.png"))),
                         ),
@@ -87,7 +87,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                                     color: kTitleColor,
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 4,
                                 ),
                                 Row(
@@ -96,7 +96,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                                       FeatherIcons.mapPin,
                                       color: kMainColor,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 4,
                                     ),
                                     Flexible(
@@ -108,7 +108,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                                     )
                                   ],
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 7,
                                 ),
                                 Row(
@@ -117,7 +117,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                                       IconlyLight.timeCircle,
                                       color: kWatchColor,
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 4,
                                     ),
                                     Text(
@@ -134,7 +134,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 Text(
@@ -156,17 +156,17 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               decoration: BoxDecoration(
                                   color: kMainColor,
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10))),
+                                      const BorderRadius.all(Radius.circular(10))),
                               child: Icon(
                                 IconlyBold.upload,
                                 color: kLikeWhiteColor,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 16,
                             ),
                             Text(
@@ -185,7 +185,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                         ),
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 Text(
@@ -193,7 +193,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                   style: TextStyle(
                       color: kTitleColor, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 Card(
@@ -222,7 +222,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 8,
                           ),
                           Text(
@@ -232,7 +232,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                         ],
                       ),
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 24,
                 ),
                 Text(
@@ -240,7 +240,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                   style: TextStyle(
                       color: kTitleColor, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 12,
                 ),
                 AppTextField(
@@ -249,7 +249,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                       hintText: "Enter  message,,,",
                       hintStyle: TextStyle(color: kSubTitleColor),
                       enabledBorder:  OutlineInputBorder(
-                          borderRadius:  BorderRadius.all(
+                          borderRadius:  const BorderRadius.all(
                             Radius.circular(10.0),
 
                           ),

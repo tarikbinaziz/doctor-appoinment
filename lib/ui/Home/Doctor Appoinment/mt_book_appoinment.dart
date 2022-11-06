@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Patients%20Details/mt_patients_details.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_patients_details.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../../Styles/style.dart';

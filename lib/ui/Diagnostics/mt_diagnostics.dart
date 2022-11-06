@@ -1,28 +1,21 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:maan_doctor_appoinment/ui/Diagnostics/mt_diagnostics_details.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_near_by_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy_categories.dart';
-import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy_details.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_upload_prescription.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../const/const.dart';
-import '../Cart/mt_cart.dart';
 import '../Styles/style.dart';
-import '../Home/Doctor Appoinment/mt_categories.dart';
-import '../Home/Doctor Appoinment/mt_popular_doctor.dart';
-import '../Home/Doctor Appoinment/mt_heart.dart';
 
-class PharmacyScreen extends StatefulWidget {
-  const PharmacyScreen({Key? key}) : super(key: key);
+class DiagnosticsScreen extends StatefulWidget {
+  const DiagnosticsScreen({Key? key}) : super(key: key);
 
   @override
-  State<PharmacyScreen> createState() => _PharmacyScreenState();
+  State<DiagnosticsScreen> createState() => _DiagnosticsScreenState();
 }
 
-class _PharmacyScreenState extends State<PharmacyScreen> {
+class _DiagnosticsScreenState extends State<DiagnosticsScreen> {
   List texts = [
     "Injection",
     "Bandages",
@@ -40,32 +33,32 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
 
   List colors = [
     kHeartBgColor,
-    kDentalBgColor,
     kKedneyBgColor,
     kLungsBgColor,
-    kHeartBgColor,
-    kDentalBgColor,
+    kDaigLungsBGColor, kHeartBgColor,
     kKedneyBgColor,
     kLungsBgColor,
-    kHeartBgColor,
-    kDentalBgColor,
+    kDaigLungsBGColor, kHeartBgColor,
     kKedneyBgColor,
     kLungsBgColor,
+    kDaigLungsBGColor,
+
   ];
 
   List icons = [
-    "assets/images/injection.png",
-    "assets/images/bandegs.png",
-    "assets/images/medicins.png",
-    "assets/images/tharmometer.png",
-    "assets/images/injection.png",
-    "assets/images/bandegs.png",
-    "assets/images/medicins.png",
-    "assets/images/tharmometer.png",
-    "assets/images/injection.png",
-    "assets/images/bandegs.png",
-    "assets/images/medicins.png",
-    "assets/images/tharmometer.png",
+    "assets/images/bone.png",
+    "assets/images/cancer.png",
+    "assets/images/covid_diag.png",
+    "assets/images/lungs.png",
+    "assets/images/bone.png",
+    "assets/images/cancer.png",
+    "assets/images/covid_diag.png",
+    "assets/images/lungs.png",
+    "assets/images/bone.png",
+    "assets/images/cancer.png",
+    "assets/images/covid_diag.png",
+    "assets/images/lungs.png",
+
   ];
 
   @override
@@ -78,64 +71,28 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
         elevation: 0,
         toolbarHeight: 60,
         title: Text(
-          "Pharmacy",
+          "Diagnostics",
           style: ktitleTextStyle,
         ),
         leading: BackButton(
           color: kTitleColor,
         ),
         actions: [
-          Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: kTextFieldBorderColor, width: 1)),
-              child: Icon(
-                IconlyLight.search,
-                color: kTitleColor,
-              )),
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(10.0),
             child: Container(
-              height: 40,
-              width: 40,
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: kTextFieldBorderColor, width: 1)),
-              child: Badge(
-                  badgeColor: kBadgeColor,
-                  position: BadgePosition(top: -8, end: -5),
-                  padding: EdgeInsets.all(3),
-                  borderRadius: BorderRadius.circular(40),
-                  badgeContent: Text(
-                    "2",
-                    style: TextStyle(color: kLikeWhiteColor),
-                  ),
-                  child: Icon(
-                    Icons.shopping_cart,
-                    color: kTitleColor,
-                  )),
-            ),
-          )
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: kTextFieldBorderColor, width: 1)),
+                child: Icon(
+                  IconlyLight.search,
+                  color: kTitleColor,
+                )),
+          ),
+
         ],
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(14.0),
-        child: AppButton(
-          text: "Upload Prescription",
-          textColor: kLikeWhiteColor,
-          elevation: 0,
-          color: kMainColor,
-          onTap: () {
-            UploadPrescriptionScreen().launch(context);
-    }
-          ,
-          //  padding: EdgeInsets.zero,
-          shapeBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
-              borderRadius: BorderRadius.circular(6)),
-        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -147,14 +104,14 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
               padding: const EdgeInsets.all(10.0),
               child: Container(
                 width: double.infinity,
-                height: context.height() / 5,
+                height: context.height() / 4.8,
                 decoration: BoxDecoration(
                     image: const DecorationImage(
-                        image: AssetImage("assets/images/pharmacy_main.png"),
+                        image: AssetImage("assets/images/diag_doc.png"),
                         fit: BoxFit.fill),
                     borderRadius: BorderRadius.circular(10)),
                 child: Padding(
-                  padding: const EdgeInsets.all(12.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,15 +123,14 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                             color: kLikeWhiteColor,
                             fontSize: 18.0),
                       ),
+                      SizedBox(height: 6,),
                       Text(
                         "30% OFF",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: kLikeWhiteColor),
                       ),
-                      SizedBox(
-                        height: 8,
-                      ),
+                      SizedBox(height: 12,),
                       Container(
                         height: 30,
                         width: 90,
@@ -183,10 +139,10 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                             color: kLikeWhiteColor),
                         child: Center(
                             child: Text(
-                          "View More",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600, color: kTitleColor),
-                        )),
+                              "View More",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w600, color: kTitleColor),
+                            )),
                       )
                     ],
                   ),
@@ -257,7 +213,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                           ),
                         );
                       },
-                    ).onTap(() => HeartScreen().launch(context)),
+                    ),
                     const SizedBox(
                       height: 24,
                     ),
@@ -265,7 +221,7 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Nearby Parmecy",
+                          "Nearby Diagnostics",
                           style: ktitleTextStyle.copyWith(fontSize: 18),
                         ),
                         Text(
@@ -278,9 +234,10 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                       height: 12,
                     ),
                     HorizontalList(
+                      padding: EdgeInsets.zero,
                       itemBuilder: (context, index) {
                         return SizedBox(
-                          width: context.width() / 1.6,
+                          width: context.width() / 1.7,
                           child: Card(
                             elevation: 0,
                             shape: OutlineInputBorder(
@@ -299,17 +256,17 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                                           topRight: Radius.circular(10)),
                                       image: DecorationImage(
                                           image: AssetImage(
-                                              "assets/images/pharmacy_ladies.png"),
+                                              "assets/images/diagnostics_lab.png"),
                                           fit: BoxFit.fill)),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Column(
                                     crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    CrossAxisAlignment.start,
                                     children: [
                                       const Text(
-                                        "Maan Pharmacy Ltd.",
+                                        "Tested Labs.",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w600),
                                       ),
@@ -337,44 +294,28 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                                         height: 6,
                                       ),
                                       Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
-                                          Row(
-                                            children: [
-                                              ImageIcon(
-                                                AssetImage(
-                                                    "assets/images/truck.png"),
-                                                size: 20,
-                                                color: kTruckColor,
-                                              ),
-                                              Text(" Free delivery",style: ksubTitleTextStyle,)
-                                            ],
+                                          Icon(
+                                            IconlyBold.star,
+                                            color: kStarColor,
+                                            size: 20,
                                           ),
-                                          Row(
-                                            children: [
-                                              Icon(
-                                                IconlyBold.star,
-                                                color: kStarColor,
-                                                size: 20,
-                                              ),
-                                              RichText(
-                                                  text: TextSpan(
-                                                      text: " 4.5 ",
-                                                      style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.w400,
-                                                          color: kTitleColor),
-                                                      children: [
+                                          RichText(
+                                              text: TextSpan(
+                                                  text: " 4.5 ",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                      FontWeight.w400,
+                                                      color: kTitleColor),
+                                                  children: [
                                                     TextSpan(
-                                                        text: "(70+) ",
+                                                        text: "(100+ Ratings)",
                                                         style: TextStyle(
                                                             fontWeight:
-                                                                FontWeight.w400,
+                                                            FontWeight.w400,
                                                             color:
-                                                                kSubTitleColor)),
+                                                            kSubTitleColor)),
                                                   ]))
-                                            ],
-                                          ),
                                         ],
                                       ),
                                     ],
@@ -383,7 +324,119 @@ class _PharmacyScreenState extends State<PharmacyScreen> {
                               ],
                             ),
                           ),
-                        ).onTap(()=>PharmacyDetailsScreen().launch(context));
+                        );
+                      },
+                      itemCount: 4,
+                    ).onTap(() => DiagnosticsDetailsScreen().launch(context)),
+                    const SizedBox(
+                      height: 24,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Popular Diagnostics",
+                          style: ktitleTextStyle.copyWith(fontSize: 18),
+                        ),
+                        Text(
+                          "View All",
+                          style: ksubTitleTextStyle,
+                        ).onTap(() => NearByPharmacyScreen().launch(context)),
+                      ],
+                    ), const SizedBox(
+                      height: 12,
+                    ),HorizontalList(
+                      padding: EdgeInsets.zero,
+                      itemBuilder: (context, index) {
+                        return SizedBox(
+                          width: context.width() / 1.7,
+                          child: Card(
+                            elevation: 0,
+                            shape: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                borderSide: BorderSide.none),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                  height: 128,
+                                  width: context.width(),
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(10),
+                                          topRight: Radius.circular(10)),
+                                      image: DecorationImage(
+                                          image: AssetImage(
+                                              "assets/images/crist_diag.png"),
+                                          fit: BoxFit.fill)),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      const Text(
+                                        "Tested Labs.",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                      const SizedBox(
+                                        height: 6,
+                                      ),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(
+                                            IconlyLight.location,
+                                            color: kMainColor,
+                                            size: 16,
+                                          ),
+                                          Flexible(
+                                            child: Text(
+                                              "Dhaka Medical, bangladesh",
+                                              overflow: TextOverflow.ellipsis,
+                                              style: ksubTitleTextStyle,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(
+                                        height: 6,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            IconlyBold.star,
+                                            color: kStarColor,
+                                            size: 20,
+                                          ),
+                                          RichText(
+                                              text: TextSpan(
+                                                  text: " 4.5 ",
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                      FontWeight.w400,
+                                                      color: kTitleColor),
+                                                  children: [
+                                                    TextSpan(
+                                                        text: "(100+ Ratings)",
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                            FontWeight.w400,
+                                                            color:
+                                                            kSubTitleColor)),
+                                                  ]))
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
                       },
                       itemCount: 4,
                     ),
