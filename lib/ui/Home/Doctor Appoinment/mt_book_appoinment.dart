@@ -3,9 +3,9 @@ import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_patients_d
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../../Styles/style.dart';
-import 'mt_Offline_Appointments_Details.dart';
+import '../../History/Appoinment History/mt_Offline_Appointments_Details.dart';
 import 'mt_message.dart';
-import 'mt_online_appoinment_details.dart';
+import '../../History/Appoinment History/mt_online_appoinment_details.dart';
 import 'mt_video_call.dart';
 import 'mt_voice_call.dart';
 

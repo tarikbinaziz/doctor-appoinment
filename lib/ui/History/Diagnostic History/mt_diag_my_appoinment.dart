@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import '../../../const/const.dart';
-import '../../../model/mt_doctor_model.dart';
-import '../Home/Doctor Appoinment/mt_doctor_details.dart';
-import '../Styles/style.dart';
+import '../../../../const/const.dart';
+import '../../../../model/mt_doctor_model.dart';
+import '../../Home/Doctor Appoinment/mt_doctor_details.dart';
+import '../../Styles/style.dart';
 import 'mt_diag_Offline_Appointments_Details.dart';
 
 class DiagnosticsMyAppoinmentScreen extends StatefulWidget {

@@ -5,7 +5,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../../../model/mt_doctor_model.dart';
 import '../../Styles/style.dart';
-import 'mt_doctor_details.dart';
+import '../../Home/Doctor Appoinment/mt_doctor_details.dart';
 
 class MyAppoinmentScreen extends StatefulWidget {
   const MyAppoinmentScreen({Key? key}) : super(key: key);

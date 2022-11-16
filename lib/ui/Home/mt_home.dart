@@ -4,10 +4,12 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Notifications/mt_notifications.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_doctor_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/Nursing%20Care/mt_nursing_care.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../model/mt_doctor_model.dart';
+import '../Ambulance/mt_ambulance.dart';
 import '../Diagnostics/mt_diagnostics.dart';
 import 'Doctor Appoinment/mt_popular_doctor.dart';
 
@@ -215,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
+                    ).onTap(()=>AmbulanceScreen().launch(context)),
                   ),
                   const SizedBox(
                     width: 12,
@@ -238,7 +240,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
+                    ).onTap(()=>NursingCareScreen().launch(context)),
                   ),
                 ],
               ),

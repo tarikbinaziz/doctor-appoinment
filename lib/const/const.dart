@@ -31,6 +31,12 @@ Color kTruckColor = const Color(0xFF12B289);
 Color kCartColor = const Color(0xFFCAFFCD);
 Color kDividerColor = const Color(0xFFDEDEE0);
 Color kDaigLungsBGColor = const Color(0xFF4CC4E0);
+Color kGAmbulanceBGColor = const Color(0xFFFFF3F2);
+Color kIcuAmbulanceBGColor = const Color(0xFFDDFDFF);
+Color kFreegeAmbulanceBGColor = const Color(0xFFFFF9EB);
+Color k15DaysBGColor = const Color(0xFF35CDB1);
+Color k30DaysBGColor = const Color(0xFFFF9836);
+Color k0000BlackColor= Color(0xFF000000);
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(vertical: 5),
@@ -50,3 +56,8 @@ String reviewWomen =
 String aboutUs =
     "Pellentesque egestas sit tincidunt porta leo a con se ctetur. At nisl semper urna vitae sed\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Odio vitae scelerisque sed ut. Tellus viverra facil isi sagittis hac. Ac imperdiet ultrices fringilla curabit ur nullam nibh amet, eu.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Et consequat aliquet massa mattis nec, suscipit erat. Cras dui, purus neque consectetur. Lectus non ac tempus aliquam urna, sit donec. Eu aliquet et eget penatibus egestas mattis sed. Dolor ipsum eu et molestie. Neque nibh vulputate molestie amet morbi odio. At elementum, rhoncus, magna ipsum, et morbi dictum porttitor. Tincidunt imperdiet bibendum nec volutpat amet, sed pulvinar pellentesque consectetur. Urna nunc, id nibh facilisis amet urna non. Nisi justo, eu risus id. Ut duis faucibus arcu nibh. ";
 String napaDetails= "Take this medicine in the dose and duration as advised by your doctor. Swallow it as a whole. Do not chew, crush or break it. Napa Extend is to be taken with food.";
+
+String pac1="Nurse will be present in the workplace on time.";
+String pac2="Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Felis volutpat dictumst";
+String pac3="pellentesque enim, libero augue sed. Sagittis ult rices quisque purus id euismod diam orci cura bitur sodales Et sollicitudin";
+String pac4="Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Felis volutpat dictumst";

@@ -5,11 +5,11 @@ import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/credit_card_widget.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Diagnostics/mt_diag_payment_method.dart';
-import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_my_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/History/Appoinment%20History/mt_my_appoinment.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../Styles/style.dart';
-import 'mt_diag_my_appoinment.dart';
+import '../History/Diagnostic History/mt_diag_my_appoinment.dart';
 
 
 class DiagnosticsPaymentScreen extends StatefulWidget {
