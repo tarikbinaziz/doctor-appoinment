@@ -28,7 +28,7 @@ class NursingCareScreen extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-            color: kContainerBgColor,
+            color: kbigContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
@@ -40,7 +40,7 @@ class NursingCareScreen extends StatelessWidget {
 
               Container(
                 width: double.infinity,
-                height: context.height() / 5,
+                height: context.height() / 4.6,
                 decoration: BoxDecoration(
                     image: const DecorationImage(
                         image: AssetImage("assets/images/nursing_care_banner.png"),
@@ -70,7 +70,7 @@ class NursingCareScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 16,
+                        height: 8,
                       ),
                       Container(
                         height: 30,

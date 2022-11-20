@@ -56,7 +56,7 @@ class _BookAmbulanceScreenState extends State<BookAmbulanceScreen> {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-              color: kContainerBgColor,
+              color: kbigContainerColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),

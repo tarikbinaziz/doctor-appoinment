@@ -2,6 +2,7 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_upload_prescription.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../const/const.dart';
@@ -103,7 +104,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
             textColor: kLikeWhiteColor,
             elevation: 0,
             color: kMainColor,
-            onTap: () => PatientsDetailsScreen().launch(context),
+            onTap: () => UploadPrescriptionScreen().launch(context),
             //  padding: EdgeInsets.zero,
             shapeBorder: OutlineInputBorder(
                 borderSide: BorderSide.none,
@@ -114,7 +115,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
           child: Column(
             children: [
               Container(
-                height: 270,
+                height: 230,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/pharmacy_ladies.png'),
@@ -252,9 +253,9 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                       height: context.height(),
                       child: TabBarView(
                         controller: _tabController,
+                        physics: NeverScrollableScrollPhysics(),
                         children: [
                           Column(
-                            mainAxisSize: MainAxisSize.min,
                             children: [
                               SizedBox(height: 10,),
                               Padding(
@@ -277,11 +278,12 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                 ),
                               ),
                               SizedBox(height: 24,),
-                              SizedBox(
-                                height: context.height(),
+                              Expanded(
                                 child: GridView.builder(
                                   padding: EdgeInsets.zero,
-                                    physics: NeverScrollableScrollPhysics(),
+                                    shrinkWrap: true,
+                                 itemCount: 8,
+                                   physics: NeverScrollableScrollPhysics(),
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                             crossAxisCount: 2,
@@ -381,15 +383,15 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                                         ),
                                                       ])),
                                                   AppButton(
-                                                    text: "Book Now",
+                                                    text: "Add to Cart",
                                                     textColor: kLikeWhiteColor,
                                                     width: double.infinity,
                                                     padding: EdgeInsets.zero,
                                                     enableScaleAnimation: false,
                                                     elevation: 0,
                                                     color: kMainColor,
-                                                    onTap: () => HomeScreen()
-                                                        .launch(context),
+                                                    onTap: () {
+                                                      },
                                                     //  padding: EdgeInsets.zero,
                                                     shapeBorder: OutlineInputBorder(
                                                         borderSide: BorderSide.none,
@@ -553,6 +555,7 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                             ],
                           ),
                           Column(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.only(top: 15.0),
@@ -587,58 +590,55 @@ class _PharmacyDetailsScreenState extends State<PharmacyDetailsScreen>
                                 padding: EdgeInsets.zero,
                                 shrinkWrap: true,
                                 physics: const NeverScrollableScrollPhysics(),
-                                itemCount: reviewImages.length,
+                                itemCount: 6,
                                 itemBuilder: (BuildContext context, int index) {
-                                  return SizedBox(
-                                    width: context.width(),
-                                    child: Card(
-                                      elevation: 0,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                          side: BorderSide(
-                                              color: kSubTitleColor
-                                                  .withOpacity(0.10))),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 8.0, right: 8.0, bottom: 16.0),
-                                        child: Column(
-                                          children: [
-                                            ListTile(
-                                              contentPadding: EdgeInsets.zero,
-                                              minVerticalPadding: 0.0,
-                                              leading: CircleAvatar(
-                                                radius: 20,
-                                                backgroundImage: AssetImage(
-                                                    reviewImages[index]),
-                                              ),
-                                              title: Text(
-                                                "Jerome Bell",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
-                                                    color: kTitleColor),
-                                              ),
-                                              subtitle: RatingBarWidget(
-                                                size: 14,
-                                                onRatingChanged: (value) {},
-                                                itemCount: 5,
-                                                rating: 4,
-                                                activeColor: kStarColor,
-                                                inActiveColor: kStarColor,
-                                              ),
-                                              trailing: Text(
-                                                "31 Min Ago",
-                                                style: TextStyle(
-                                                    color: kSubTitleColor),
-                                              ),
+                                  return Card(
+                                    elevation: 0,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                        side: BorderSide(
+                                            color: kSubTitleColor
+                                                .withOpacity(0.10))),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 8.0, right: 8.0, bottom: 16.0),
+                                      child: Column(
+                                        children: [
+                                          ListTile(
+                                            contentPadding: EdgeInsets.zero,
+                                            minVerticalPadding: 0.0,
+                                            leading: CircleAvatar(
+                                              radius: 20,
+                                              backgroundImage: AssetImage(
+                                                  reviewImages[index]),
                                             ),
-                                            Text(
-                                              reviewWomen,
+                                            title: Text(
+                                              "Jerome Bell",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w400,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: kTitleColor),
+                                            ),
+                                            subtitle: RatingBarWidget(
+                                              size: 14,
+                                              onRatingChanged: (value) {},
+                                              itemCount: 5,
+                                              rating: 4,
+                                              activeColor: kStarColor,
+                                              inActiveColor: kStarColor,
+                                            ),
+                                            trailing: Text(
+                                              "31 Min Ago",
+                                              style: TextStyle(
                                                   color: kSubTitleColor),
-                                            )
-                                          ],
-                                        ),
+                                            ),
+                                          ),
+                                          Text(
+                                            reviewWomen,
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                color: kSubTitleColor),
+                                          )
+                                        ],
                                       ),
                                     ),
                                   );

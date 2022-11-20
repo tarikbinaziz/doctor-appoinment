@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -23,24 +24,20 @@ class HeartScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(14.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: 10,
-          itemBuilder: (BuildContext context, int index) { return SizedBox(
-                height: context.height() / 4.5,
-                width: context.width(),
-                child: Padding(
-                  padding: const EdgeInsets.all(4.0),
-                  child: Card(
+                itemCount: 8,
+          itemBuilder: (BuildContext context, int index) {
+                  return Card(
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                         side: BorderSide(color: kSubTitleColor.withOpacity(0.10))),
                     child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,14 +61,18 @@ class HeartScreen extends StatelessWidget {
                                       "Dr. Randy Wigham",
                                       style: TextStyle(fontWeight: FontWeight.w700),
                                     ),
-                                    RichText(
-                                        text: TextSpan(
-                                            text:
-                                            "National Institute of Cancer Research\n& Hospital,",
-                                            style: ksubTitleTextStyle,
-                                            children: [
-                                              TextSpan(text: " (Heart Specialist)",style: TextStyle(color: kMainColor))
-                                            ])),
+                                    SizedBox(
+                                      width: 220,
+                                      child: RichText(
+                                        maxLines: 3,
+                                          text: TextSpan(
+                                              text:
+                                              "National Institute of Cancer Research & Hospital,",
+                                              style: ksubTitleTextStyle,
+                                              children: [
+                                                TextSpan(text: " (Heart Specialist)",style: TextStyle(color: kMainColor))
+                                              ])),
+                                    ),
                                     SizedBox(height: 4,),
                                     RichText(
                                         text: TextSpan(
@@ -104,18 +105,20 @@ class HeartScreen extends StatelessWidget {
                                   ],),
                               ),
                               SizedBox(width: 8,),
-                              AppButton(
-                                padding: EdgeInsets.zero,
-                                elevation: 0,
-                                color: kMainColor,
-                                shapeBorder: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(5),
-                                    borderSide: BorderSide.none
+                              Expanded(
+                                child: AppButton(
+                                  padding: EdgeInsets.zero,
+                                  elevation: 0,
+                                  enableScaleAnimation: false,
+                                  color: kMainColor,
+                                  shapeBorder: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(5),
+                                      borderSide: BorderSide.none
+                                  ),
+                                  text: "Book Now",
+                                  textStyle: TextStyle(color: kLikeWhiteColor,fontWeight: FontWeight.w700),
+                                  onTap: (){},
                                 ),
-                                width: context.width()/1.7,
-                                text: "Book Now",
-                                textStyle: TextStyle(color: kLikeWhiteColor,fontWeight: FontWeight.w700),
-                                onTap: (){},
                               )
 
                             ],
@@ -124,10 +127,8 @@ class HeartScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
-                ),
-              ); },
-                
+                  ); },
+
               ),
             )
           ],

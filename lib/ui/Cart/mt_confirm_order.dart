@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_order_successful.dart';
+import 'package:maan_doctor_appoinment/ui/Cart/mt_payment_method.dart';
+import 'package:maan_doctor_appoinment/ui/Cart/mt_shipping_address.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../const/const.dart';
 import '../Styles/style.dart';
@@ -69,9 +70,11 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                 Text(
                   "Total Item (2)",
                   style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                ),SizedBox(height: 12,),
                 HorizontalList(
                     itemCount: 4,
+                    padding: EdgeInsets.zero,
+                    runSpacing: 0,
                     itemBuilder: (_, index) {
                       return SizedBox(
                         width: context.width()/1.3,
@@ -82,12 +85,17 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                               side: BorderSide(
                                   color: kSubTitleColor.withOpacity(0.10))),
                           child: Row(
+                            mainAxisSize: MainAxisSize.min,
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(50),
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage("assets/images/napa.png"))),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Container(
+                                  width: 72,
+                                  height: 72,
+                                  decoration: BoxDecoration(
+                                      image: DecorationImage(
+                                          image: AssetImage("assets/images/napa.png"),fit: BoxFit.fill)),
+                                ),
                               ),
                               Expanded(
                                 child: Padding(
@@ -159,6 +167,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                         ),
                       );
                     }),
+                SizedBox(height: 24,),
                 Row(
                   children: [
                     Text(
@@ -208,7 +217,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                     Text(
                       "Change",
                       style: TextStyle(color: kBadgeColor),
-                    ),
+                    ).onTap(()=>ShippingAddress().launch(context)),
                   ],
                 ),
                 SizedBox(height: 12,),
@@ -235,7 +244,7 @@ class _ConfirmOrderScreenState extends State<ConfirmOrderScreen> {
                     Text(
                       "Change",
                       style: TextStyle(color: kBadgeColor),
-                    ),
+                    ).onTap(()=>PaymentMethodScreen().launch(context)),
                   ],
                 ),
                 SizedBox(height: 12,),

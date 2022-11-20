@@ -116,7 +116,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                         sortComparator: (Country a, Country b) => a.isoCode.compareTo(b.isoCode),
                         onValuePicked: (Country country) {
-                          print("${country.name}");
+
                         },
                       ),
                     )),

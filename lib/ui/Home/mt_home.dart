@@ -2,14 +2,18 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
+import 'package:maan_doctor_appoinment/ui/Diagnostics/mt_diagnostics_book_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_book_appoinment.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Notifications/mt_notifications.dart';
 import 'package:maan_doctor_appoinment/ui/Home/Doctor%20Appoinment/mt_doctor_appoinment.dart';
 import 'package:maan_doctor_appoinment/ui/Nursing%20Care/mt_nursing_care.dart';
+import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../model/mt_doctor_model.dart';
 import '../Ambulance/mt_ambulance.dart';
+import '../Cart/mt_cart.dart';
 import '../Diagnostics/mt_diagnostics.dart';
 import 'Doctor Appoinment/mt_popular_doctor.dart';
 
@@ -190,7 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                    ),
+                    ).onTap(()=>PharmacyScreen().launch(context)),
                   ),
                 ],
               ),
@@ -268,6 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.zero,
                 itemBuilder: (BuildContext context, int index) {
                   return SizedBox(
+                    height: 185,
                     width: context.width()/1.3,
                     child: Card(
                       elevation: 0,
@@ -405,9 +410,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(
-                              height: 8.0,
-                            ),
+                            Spacer(),
                             AppButton(
                               text: "Book Now",
                               textColor: kLikeWhiteColor,
@@ -416,7 +419,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               enableScaleAnimation: false,
                               elevation: 0,
                               color: kMainColor,
-                              onTap: () => HomeScreen().launch(context),
+                              onTap: (){
+                                BookAppoinment().launch(context);
+                              },
                               //  padding: EdgeInsets.zero,
                               shapeBorder: OutlineInputBorder(
                                   borderSide: BorderSide.none,
@@ -509,8 +514,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               padding: EdgeInsets.zero,
                               enableScaleAnimation: false,
                               color: kMainColor,
-                              onTap: () => HomeScreen().launch(context),
-                              //  padding: EdgeInsets.zero,
+                              onTap: () {
+                                DiagnosticsBookAppoinment().launch(context);
+                              },
                               shapeBorder: OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                   borderRadius: BorderRadius.circular(6)),
@@ -543,7 +549,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               HorizontalList(
                   itemCount: 4,
-                  spacing: 15,
+
                   itemBuilder: (_, index) {
                     return SizedBox(
                       width: context.width() / 2.2,
@@ -628,7 +634,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     elevation: 0,
                                     padding: EdgeInsets.zero,
                                     color: kMainColor,
-                                    onTap: () => HomeScreen().launch(context),
+                                    onTap: () =>CartScreen().launch(context) ,
                                     shapeBorder: OutlineInputBorder(
                                         borderSide: BorderSide.none,
                                         borderRadius: BorderRadius.circular(6)),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
 import 'package:maan_doctor_appoinment/ui/Ambulance/mt_ambulance_book_details.dart';
 import 'package:maan_doctor_appoinment/ui/Home/mt_home.dart';
+import 'package:maan_doctor_appoinment/ui/Home/mt_home_bottom_nav.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -128,7 +129,7 @@ class _ConfirmBookScreenState extends State<ConfirmBookScreen> {
                                     elevation: 0,
                                     color: kLikeWhiteColor,
                                     onTap: () {
-                                      HomeScreen().launch(context);
+                                      HomeBottomNavBarScreen().launch(context);
                                     },
                                     //  padding: EdgeInsets.zero,
                                     shapeBorder: OutlineInputBorder(
@@ -158,14 +159,14 @@ class _ConfirmBookScreenState extends State<ConfirmBookScreen> {
       ),
       body: Container(
         decoration: BoxDecoration(
-            color: kContainerBgColor,
+            color: kbigContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
             )),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Expanded(
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

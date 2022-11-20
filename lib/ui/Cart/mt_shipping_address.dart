@@ -15,223 +15,257 @@ class ShippingAddress extends StatefulWidget {
 }
 
 class _ShippingAddressState extends State<ShippingAddress> {
-  bool isToggled=true;
+  bool isToggled = true;
   void _showModalBottomSheet() {
     showModalBottomSheet(
         isScrollControlled: true,
         context: context,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         builder: (builder) {
-          return StatefulBuilder(builder: (BuildContext context, void Function(void Function()) setState) { return Padding(
-            padding: EdgeInsets.only(left: 10.0, right: 10, top: 10, bottom: MediaQuery.of(context).viewInsets.bottom),
-            child: Container(
-              decoration:
-              const BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0), topRight: Radius.circular(10.0))),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          return StatefulBuilder(
+            builder: (BuildContext context,
+                void Function(void Function()) setState) {
+              return Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10.0),
+                          topRight: Radius.circular(10.0))),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        "Add New Address",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: kTitleColor,
-                        ),
-                      ),
-                      // Spacer(),
-                      TextButton(
-                          onPressed: () => finish(context),
-                          child:  Icon(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Add New Address",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: kTitleColor,
+                            ),
+                          ),
+                          // Spacer(),
+                          Icon(
                             Icons.close,
                             color: kTitleColor,
-                          )),
+                          ).onTap(()=>finish(context)),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      AppTextField(
+                          textFieldType: TextFieldType.NAME,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(left: 10),
+                              label: Text("Full Name"),
+                              labelStyle: TextStyle(color: kTitleColor),
+                              hintText: "Enter your name",
+                              hintStyle: TextStyle(color: kSubTitleColor),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              enabledBorder:OutlineInputBorder(
+                              borderSide: BorderSide(
+                              color: kTextFieldBorderColor, width: 1)),
+                            )),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      AppTextField(
+                          textFieldType: TextFieldType.NAME,
+                          decoration: InputDecoration(
+                              label: Text("Conuntry"),
+                              contentPadding: EdgeInsets.only(left: 10),
+                              labelStyle: TextStyle(color: kTitleColor),
+                              hintText: "Bangladesh",
+                              hintStyle: TextStyle(color: kSubTitleColor),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: kTextFieldBorderColor,
+                                      width: 1)))),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      AppTextField(
+                          textFieldType: TextFieldType.NAME,
+                          decoration: InputDecoration(
+                              contentPadding: EdgeInsets.only(left: 10),
+                              label: Text("Street Address"),
+                              labelStyle: TextStyle(color: kTitleColor),
+                              hintText: "6391 Elgin St. Celina, Delaware 10299",
+                              hintStyle: TextStyle(color: kSubTitleColor),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: kTextFieldBorderColor,
+                                      width: 1)))),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: AppTextField(
+                                textFieldType: TextFieldType.NAME,
+                                decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.only(left: 10),
+                                    label: Text("Town / City"),
+                                    labelStyle: TextStyle(color: kTitleColor),
+                                    hintText: "Dhaka",
+                                    hintStyle: TextStyle(color: kSubTitleColor),
+                                    floatingLabelBehavior:
+                                        FloatingLabelBehavior.always,
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: kTextFieldBorderColor,
+                                            width: 1)))),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Expanded(
+                            child: AppTextField(
+                                textFieldType: TextFieldType.NAME,
+                                decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.only(left: 10),
+                                    label: Text("Postcode"),
+                                    labelStyle: TextStyle(color: kTitleColor),
+                                    hintText: "3610",
+                                    hintStyle: TextStyle(color: kSubTitleColor),
+                                    floatingLabelBehavior:
+                                        FloatingLabelBehavior.always,
+                                    enabledBorder: OutlineInputBorder(
+                                        borderSide: BorderSide(
+                                            color: kTextFieldBorderColor,
+                                            width: 1)))),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      AppTextField(
+                          textFieldType: TextFieldType.NAME,
+                          decoration: InputDecoration(
+                              label: Text("Email"),
+                              contentPadding: EdgeInsets.only(left: 10),
+                              labelStyle: TextStyle(color: kTitleColor),
+                              hintText: "janecooper@gmail.com",
+                              hintStyle: TextStyle(color: kSubTitleColor),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: kTextFieldBorderColor,
+                                      width: 1)))),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      AppTextField(
+                        textFieldType: TextFieldType.NUMBER,
+                        decoration: InputDecoration(
+                            labelText: "Mobile Number",
+                            contentPadding: EdgeInsets.only(left: 10),
+                            labelStyle: TextStyle(color: kTitleColor),
+                            floatingLabelBehavior: FloatingLabelBehavior.never,
+                            hintText: "Mobile Number",
+                            enabledBorder: OutlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: kTextFieldBorderColor)),
+                            prefixIcon: Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 8.0, right: 6.0),
+                              child: CountryPickerDropdown(
+                                initialValue: 'AR',
+                                iconSize: 18.0,
+                                itemBuilder: _buildDropdownItem,
+                                priorityList: [
+                                  CountryPickerUtils.getCountryByIsoCode('GB'),
+                                  CountryPickerUtils.getCountryByIsoCode('CN'),
+                                ],
+                                sortComparator: (Country a, Country b) =>
+                                    a.isoCode.compareTo(b.isoCode),
+                                onValuePicked: (Country country) {},
+                              ),
+                            )),
+                      ),
+                      const SizedBox(
+                        height: 18,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Use as Billing address',
+                            style: ksubTitleTextStyle,
+                          ),
+                          FlutterSwitch(
+                            height: 20.0,
+                            width: 40.0,
+                            padding: 4.0,
+                            toggleSize: 15.0,
+                            borderRadius: 10.0,
+                            activeColor: kWatchColor,
+                            value: isToggled,
+                            onToggle: (value) {
+                              setState(() {
+                                isToggled = value;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 20.0),
+                        child: AppButton(
+                          text: "Save",
+                          width: double.infinity,
+                          textColor: kLikeWhiteColor,
+                          enableScaleAnimation: false,
+                          elevation: 0,
+                          color: kMainColor,
+                          onTap: () => _showModalBottomSheet(),
+                          //  padding: EdgeInsets.zero,
+                          shapeBorder: OutlineInputBorder(
+                              borderSide: BorderSide.none,
+                              borderRadius: BorderRadius.circular(6)),
+                        ),
+                      ),
                     ],
                   ),
-
-
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  AppTextField(
-                      textFieldType: TextFieldType.NAME,
-                      decoration: InputDecoration(
-                          label: Text("Full Name"),
-                          labelStyle: TextStyle(color: kTitleColor),
-                          hintText: "Enter your full name",
-                          hintStyle: TextStyle(color: kSubTitleColor),
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: kTextFieldBorderColor, width: 1)))),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  AppTextField(
-                      textFieldType: TextFieldType.NAME,
-                      decoration: InputDecoration(
-                          label: Text("Conuntry"),
-                          labelStyle: TextStyle(color: kTitleColor),
-                          hintText: "Bangladesh",
-                          hintStyle: TextStyle(color: kSubTitleColor),
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: kTextFieldBorderColor, width: 1)))),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  AppTextField(
-                      textFieldType: TextFieldType.NAME,
-                      decoration: InputDecoration(
-                          label: Text("Street Address"),
-                          labelStyle: TextStyle(color: kTitleColor),
-                          hintText: "6391 Elgin St. Celina, Delaware 10299",
-                          hintStyle: TextStyle(color: kSubTitleColor),
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: kTextFieldBorderColor, width: 1)))),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  Row(children: [
-                    Expanded(
-                      child: AppTextField(
-                          textFieldType: TextFieldType.NAME,
-                          decoration: InputDecoration(
-                              label: Text("Town / City"),
-                              labelStyle: TextStyle(color: kTitleColor),
-                              hintText: "Dhaka",
-                              hintStyle: TextStyle(color: kSubTitleColor),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: kTextFieldBorderColor, width: 1)))),
-                    ),
-                    SizedBox(width: 10,),
-                    Expanded(
-                      child: AppTextField(
-                          textFieldType: TextFieldType.NAME,
-                          decoration: InputDecoration(
-                              label: Text("Postcode"),
-                              labelStyle: TextStyle(color: kTitleColor),
-                              hintText: "3610",
-                              hintStyle: TextStyle(color: kSubTitleColor),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: kTextFieldBorderColor, width: 1)))),
-                    ),
-                  ],),const SizedBox(
-                    height: 18,
-                  ),
-                  AppTextField(
-                      textFieldType: TextFieldType.NAME,
-                      decoration: InputDecoration(
-                          label: Text("Email"),
-                          labelStyle: TextStyle(color: kTitleColor),
-                          hintText: "janecooper@gmail.com",
-                          hintStyle: TextStyle(color: kSubTitleColor),
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: kTextFieldBorderColor, width: 1)))),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  AppTextField(
-                    textFieldType: TextFieldType.NUMBER,
-                    decoration: InputDecoration(
-                        labelText: "Mobile Number",
-                        labelStyle: TextStyle(color: kTitleColor),
-                        floatingLabelBehavior: FloatingLabelBehavior.never,
-                        hintText: "Mobile Number",
-                        border: OutlineInputBorder(
-                            borderSide: BorderSide(color: kTextFieldBorderColor)),
-                        prefixIcon: Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 6.0),
-                          child: CountryPickerDropdown(
-                            initialValue: 'AR',
-                            iconSize: 18.0,
-                            itemBuilder: _buildDropdownItem,
-                            priorityList: [
-                              CountryPickerUtils.getCountryByIsoCode('GB'),
-                              CountryPickerUtils.getCountryByIsoCode('CN'),
-                            ],
-                            sortComparator: (Country a, Country b) =>
-                                a.isoCode.compareTo(b.isoCode),
-                            onValuePicked: (Country country) {},
-                          ),
-                        )),
-                  ),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text('Use as Billing address',style: ksubTitleTextStyle,),
-                      FlutterSwitch(
-                        height: 20.0,
-                        width: 40.0,
-                        padding: 4.0,
-                        toggleSize: 15.0,
-                        borderRadius: 10.0,
-                        activeColor: kWatchColor,
-                        value: isToggled,
-                        onToggle: (value) {
-                          setState(() {
-                            isToggled=  value ;
-                          });
-                        },
-                      ),
-                    ],),
-                  const SizedBox(
-                    height: 24,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 20.0),
-                    child: AppButton(
-                      text: "Save",
-                      width: double.infinity,
-                      textColor: kLikeWhiteColor,
-                      enableScaleAnimation: false,
-                      elevation: 0,
-                      color: kMainColor,
-                      onTap: () => _showModalBottomSheet(),
-                      //  padding: EdgeInsets.zero,
-                      shapeBorder: OutlineInputBorder(
-                          borderSide: BorderSide.none,
-                          borderRadius: BorderRadius.circular(6)),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ); },
-
+                ),
+              );
+            },
           );
         });
   }
+
   Widget _buildDropdownItem(Country country) => SizedBox(
-    width: 80.0,
-    child: Row(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        CountryPickerUtils.getDefaultFlagImage(country),
-        const SizedBox(
-          width: 8.0,
+        width: 80.0,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            CountryPickerUtils.getDefaultFlagImage(country),
+            const SizedBox(
+              width: 8.0,
+            ),
+            Text(
+              "+${country.phoneCode}",
+              style: const TextStyle(fontSize: 12.0),
+            ),
+          ],
         ),
-        Text(
-          "+${country.phoneCode}",
-          style: const TextStyle(fontSize: 12.0),
-        ),
-      ],
-    ),
-  );
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -253,7 +287,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
                 topLeft: Radius.circular(20),
                 topRight: Radius.circular(20),
               )),
-          child:  Padding(
+          child: Padding(
             padding: const EdgeInsets.all(14.0),
             child: AppButton(
               text: "Add New Address",
@@ -280,16 +314,18 @@ class _ShippingAddressState extends State<ShippingAddress> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Select Shipping Address",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: kTitleColor),
                       ),
-                      SizedBox(height: 12,),
+                      SizedBox(
+                        height: 12,
+                      ),
                       ListView.builder(
-                        shrinkWrap: true,
+                          shrinkWrap: true,
                           padding: EdgeInsets.zero,
                           physics: NeverScrollableScrollPhysics(),
                           itemCount: 5,
@@ -303,26 +339,27 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                       borderRadius: BorderRadius.circular(8.0),
                                       color: kLikeWhiteColor,
                                       border: Border.all(
-                                          color: kSubTitleColor.withOpacity(0.1))
-                                  ),
+                                          color:
+                                              kSubTitleColor.withOpacity(0.1))),
                                   child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Row(
-                                          mainAxisAlignment: MainAxisAlignment
-                                              .spaceBetween,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
                                               "Shaidul Islam",
                                               style: TextStyle(
                                                   fontWeight: FontWeight.w600,
                                                   color: kTitleColor),
-                                            ), Text(
-                                              "Edit",
-                                              style: TextStyle(
-                                                  color: kBadgeColor),
                                             ),
-
+                                            Text(
+                                              "Edit",
+                                              style:
+                                                  TextStyle(color: kBadgeColor),
+                                            ),
                                           ],
                                         ),
                                         const SizedBox(
@@ -330,14 +367,14 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                         ),
                                         Text(
                                           "8 Bukit Batok Street 41, Bangladesh,\n361025",
-                                          style: TextStyle(color: kSubTitleColor),
+                                          style:
+                                              TextStyle(color: kSubTitleColor),
                                         )
-
                                       ])),
                             );
                           })
                     ]),
               ),
             )));
-  }}
-
+  }
+}

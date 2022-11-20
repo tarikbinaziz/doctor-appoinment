@@ -6,6 +6,7 @@ import 'package:flutter_credit_card/credit_card_widget.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Diagnostics/mt_diag_payment_method.dart';
 import 'package:maan_doctor_appoinment/ui/History/Appoinment%20History/mt_my_appoinment.dart';
+import 'package:maan_doctor_appoinment/ui/Home/mt_home_bottom_nav.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../../const/const.dart';
 import '../Styles/style.dart';
@@ -138,7 +139,9 @@ class _DiagnosticsPaymentScreenState extends State<DiagnosticsPaymentScreen> {
                               enableScaleAnimation: false,
                               elevation: 0,
                               color: kLikeWhiteColor,
-                              onTap: () {},
+                              onTap: () {
+                                HomeBottomNavBarScreen().launch(context);
+                              },
                               //  padding: EdgeInsets.zero,
                               shapeBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: kMainColor),

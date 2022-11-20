@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -74,7 +73,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
             },
           ),
           Container(
-            height: context.height() / 2.2,
+            height: context.height() / 2,
             decoration:  BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
@@ -125,7 +124,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
             ),
           ),
           Container(
-            height: context.height() / 3,
+            height: context.height() / 2.65,
             decoration:  BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
@@ -133,7 +132,7 @@ class _TrackOrderScreenState extends State<TrackOrderScreen> {
                 ),
                 color: kLikeWhiteColor),
             child: Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 children: [
                   ListTile(

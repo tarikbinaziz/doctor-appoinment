@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
+import 'package:maan_doctor_appoinment/ui/History/Nursing%20Care%20History/mt_upcoming_nursing_care_history.dart';
+import 'package:maan_doctor_appoinment/ui/Home/mt_home_bottom_nav.dart';
 import 'package:maan_doctor_appoinment/ui/Nursing%20Care/mt_nursing_care_details.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -112,7 +114,7 @@ class _ConfirmYourOrderScreenState extends State<ConfirmYourOrderScreen> {
                                   elevation: 0,
                                   color: kMainColor,
                                   onTap: () {
-                                    NursingCareDetailsScreen().launch(context);
+                                    UpcomingNursingCareHistoryScreen().launch(context);
                                   },
                                   //  padding: EdgeInsets.zero,
                                   shapeBorder: OutlineInputBorder(
@@ -127,7 +129,9 @@ class _ConfirmYourOrderScreenState extends State<ConfirmYourOrderScreen> {
                                   enableScaleAnimation: false,
                                   elevation: 0,
                                   color: kLikeWhiteColor,
-                                  onTap: () {},
+                                  onTap: () {
+                                    HomeBottomNavBarScreen().launch(context);
+                                  },
                                   //  padding: EdgeInsets.zero,
                                   shapeBorder: OutlineInputBorder(
                                       borderSide: BorderSide(color: kMainColor),

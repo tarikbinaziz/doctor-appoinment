@@ -33,7 +33,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0),
+                  padding: const EdgeInsets.all( 16.0),
                   child: Text(
                     "Add New Card",
                     style: TextStyle(
@@ -42,12 +42,13 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                     ),
                   ),
                 ),
-                TextButton(
-                    onPressed: () => finish(context),
-                    child: Icon(
-                      Icons.close,
-                      color: kTitleColor,
-                    )),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10.0),
+                  child: Icon(
+                    Icons.close,
+                    color: kTitleColor,
+                  ).onTap(()=>finish(context)),
+                )
               ],
             ),
             Container(
@@ -59,6 +60,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                   ),
                 ),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
                     CreditCardWidget(
                       cardNumber: '3754 9000 0800 9735',
@@ -89,22 +91,38 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       isHolderNameVisible: true,
                       isCardNumberVisible: true,
                       isExpiryDateVisible: true,
-                      cardHolderDecoration: const InputDecoration(
-                          border: OutlineInputBorder(),
+                      cardHolderDecoration:  InputDecoration(
+                          contentPadding: EdgeInsets.zero,
+                          enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: kTextFieldBorderColor, width: 1),
+                          ),
                           labelText: 'Card Holder',
                           hintText: "Enter card holder name"),
-                      cardNumberDecoration: const InputDecoration(
-                        border: OutlineInputBorder(),
+                      cardNumberDecoration:  InputDecoration(
+                        contentPadding: EdgeInsets.zero,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: kTextFieldBorderColor, width: 1),
+                        ),
                         labelText: 'Number',
                         hintText: 'Enter card number',
                       ),
-                      expiryDateDecoration: const InputDecoration(
-                        border: OutlineInputBorder(),
+                      expiryDateDecoration:  InputDecoration(
+                        contentPadding: EdgeInsets.zero,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: kTextFieldBorderColor, width: 1),
+                        ),
                         labelText: 'Expired Date',
                         hintText: 'DD-MM-YYYY',
                       ),
-                      cvvCodeDecoration: const InputDecoration(
-                        border: OutlineInputBorder(),
+                      cvvCodeDecoration:  InputDecoration(
+                        contentPadding: EdgeInsets.zero,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: kTextFieldBorderColor, width: 1),
+                        ),
                         labelText: 'CVV',
                         hintText: 'Enter CVV number',
                       ),
@@ -115,7 +133,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       cvvCode: '23/12',
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding:  EdgeInsets.all(15.0),
                       child: AppButton(
                         width: double.infinity,
                         text: "Save",

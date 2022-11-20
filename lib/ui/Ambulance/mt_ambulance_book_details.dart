@@ -43,7 +43,9 @@ class _AmbulanceBookDetailsScreenState extends State<AmbulanceBookDetailsScreen>
               child: AppButton(
                 elevation: 0,
                 enableScaleAnimation: false,
-                onTap: () {},
+                onTap: () {
+                  finish(context);
+                },
                 shapeBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide(color: kBadgeColor)),
@@ -59,7 +61,7 @@ class _AmbulanceBookDetailsScreenState extends State<AmbulanceBookDetailsScreen>
               child: AppButton(
                 elevation: 0,
                 enableScaleAnimation: false,
-                onTap: () {WriteReviewScreen().launch(context);},
+                onTap: () {},
                 shapeBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(6),
                     borderSide: BorderSide.none),
@@ -73,110 +75,112 @@ class _AmbulanceBookDetailsScreenState extends State<AmbulanceBookDetailsScreen>
           ],
         ),
       ),
-      body: Container(
-        decoration: BoxDecoration(
-            color: kbigContainerColor,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-            )),
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 16,
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      color: kLikeWhiteColor,
-                      borderRadius: BorderRadius.circular(6.0)),
-                  child: Row(
-                    children: [
-                      Container(
-                        height: 70,
-                        width: 96,
-                        decoration: BoxDecoration(
-                            color: kGAmbulanceBGColor,
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(
-                                color: kSubTitleColor.withOpacity(0.1)),
-                            image: const DecorationImage(
-                                scale: 2,
-                                image: AssetImage("assets/images/general.png"))),
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "General Ambulance",
-                        style: TextStyle(
-                            color: kTitleColor, fontWeight: FontWeight.w500),
-                      ),
-                      Spacer(),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: kSubTitleColor,
-                      )
-                    ],
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+              color: kbigContainerColor,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              )),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 16,
                   ),
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Map Direction",
-                  style: ktitleTextStyle,
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                Image.asset("assets/images/map.png",width: context.width(),),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: kLikeWhiteColor,
+                        borderRadius: BorderRadius.circular(6.0)),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 70,
+                          width: 96,
+                          decoration: BoxDecoration(
+                              color: kGAmbulanceBGColor,
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                  color: kSubTitleColor.withOpacity(0.1)),
+                              image: const DecorationImage(
+                                  scale: 2,
+                                  image: AssetImage("assets/images/general.png"))),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          "General Ambulance",
+                          style: TextStyle(
+                              color: kTitleColor, fontWeight: FontWeight.w500),
+                        ),
+                        Spacer(),
+                        Icon(
+                          Icons.keyboard_arrow_right,
+                          color: kSubTitleColor,
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Map Direction",
+                    style: ktitleTextStyle,
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Image.asset("assets/images/map.png",width: context.width(),),
 
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Pickup Point: ",
-                  style: ktitleTextStyle,
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  "Badda, 8 Bukit Batok Street 41, Bangladesh, 361025",
-                  style: ksubTitleTextStyle,
-                ),
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Destination Point: ",
-                  style: ktitleTextStyle,
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  "House # 34/35, Road # 14/A (New), Dhanmondi R/A, Dhaka-1209",
-                  style: ksubTitleTextStyle,
-                ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Pickup Point: ",
+                    style: ktitleTextStyle,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "Badda, 8 Bukit Batok Street 41, Bangladesh, 361025",
+                    style: ksubTitleTextStyle,
+                  ),
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Destination Point: ",
+                    style: ktitleTextStyle,
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "House # 34/35, Road # 14/A (New), Dhanmondi R/A, Dhaka-1209",
+                    style: ksubTitleTextStyle,
+                  ),
 
 
-                SizedBox(
-                  height: 24,
-                ),
-                Text(
-                  "Price",
-                  style: ktitleTextStyle,
-                ),
-                Text(
-                  "\$250.00",
-                  style: ksubTitleTextStyle,
-                ),
-              ],
+                  SizedBox(
+                    height: 24,
+                  ),
+                  Text(
+                    "Price",
+                    style: ktitleTextStyle,
+                  ),
+                  Text(
+                    "\$250.00",
+                    style: ksubTitleTextStyle,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

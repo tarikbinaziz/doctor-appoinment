@@ -1,6 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_order_details.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_order_track.dart';
+import 'package:maan_doctor_appoinment/ui/Home/mt_home.dart';
+import 'package:maan_doctor_appoinment/ui/Home/mt_home_bottom_nav.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../const/const.dart';
 
@@ -23,6 +26,45 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
             "Your Order Successfully!",
             style: TextStyle(color: kTitleColor),
           )),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+          AppButton(
+            text: "Track My Order",
+            enableScaleAnimation: false,
+            textColor: kLikeWhiteColor,
+            width: context.width(),
+            elevation: 0,
+            color: kMainColor,
+            onTap: (){TrackOrderScreen().launch(context);},
+            shapeBorder: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(6)
+            ),
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          AppButton(
+            text: "Back to Home",
+            textColor: kMainColor,
+            width: context.width(),
+            enableScaleAnimation: false,
+            elevation: 0,
+            color: kLikeWhiteColor,
+            onTap: () {
+              HomeBottomNavBarScreen().launch(context);
+            },
+            //  padding: EdgeInsets.zero,
+            shapeBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: kMainColor),
+                borderRadius: BorderRadius.circular(6)
+            ),
+          ),
+        ],),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -37,14 +79,14 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
             ),
             Text(
               "35 - 50 Mins",
-              style: TextStyle(color: kTitleColor, fontWeight: FontWeight.bold,fontSize: 24),
+              style: TextStyle(color: kTitleColor, fontWeight: FontWeight.bold,fontSize: 20),
             ),
             const SizedBox(
               height: 20,
             ),
             Image.asset(
               "assets/images/motor_cycle.png",
-              width: context.width()/1.5,
+              width: 200,
             ),
             const SizedBox(
               height: 20,
@@ -57,7 +99,7 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
                 "Order Details",
                 style:
                     TextStyle(color: kTitleColor, fontWeight: FontWeight.bold),
-              ).onTap(()=> OrderDetailsScreen().launch(context)),
+              ),
             ),
             const SizedBox(
               height: 16,
@@ -146,41 +188,11 @@ class _OrderSuccessfulScreenState extends State<OrderSuccessfulScreen> {
                   ],
                 ),
               ),
-              trailing: Icon(Icons.keyboard_arrow_right),
+              trailing: Icon(Icons.keyboard_arrow_right).onTap(()=>OrderDetailsScreen().launch(context)),
 
             ),
             SizedBox(height: 20,),
-            AppButton(
-              text: "Track My Order",
-              enableScaleAnimation: false,
-              textColor: kLikeWhiteColor,
-              width: context.width(),
-              elevation: 0,
-              color: kMainColor,
-              onTap: (){TrackOrderScreen().launch(context);},
-              shapeBorder: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.circular(6)
-              ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            AppButton(
-              text: "Back to Home",
-              textColor: kMainColor,
-              width: context.width(),
-              enableScaleAnimation: false,
-              elevation: 0,
-              color: kLikeWhiteColor,
-              onTap: () {
-              },
-              //  padding: EdgeInsets.zero,
-              shapeBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: kMainColor),
-                  borderRadius: BorderRadius.circular(6)
-              ),
-            ),
+
 
 
           ]),

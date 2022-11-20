@@ -9,7 +9,6 @@ import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../model/mt_doctor_model.dart';
-import '../../Widgets/elevated_button.dart';
 import 'mt_categories.dart';
 import '../mt_home.dart';
 
@@ -399,7 +398,7 @@ class DoctorAppoinmentScreen extends StatelessWidget {
                                   enableScaleAnimation: false,
                                   elevation: 0,
                                   color: kMainColor,
-                                  onTap: () => HomeScreen().launch(context),
+                                  onTap:() {},
                                   //  padding: EdgeInsets.zero,
                                   shapeBorder: OutlineInputBorder(
                                       borderSide: BorderSide.none,

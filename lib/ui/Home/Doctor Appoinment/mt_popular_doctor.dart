@@ -66,28 +66,22 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                       fillColor: kTextFieldColor),
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 20,
                 ),
-                InkWell(
-                  onTap: () {
-                    setState(() {
-                      selected = 'first';
-                    });
-                  },
-                  child: Container(
+                HorizontalList(itemCount: tittleList.length, itemBuilder: (_,index){
+                  return Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
-                        color:
-                            selected == 'first' ? kMainColor : Colors.transparent,
+                        color: kLikeWhiteColor,
                         border: Border.all(color: kTextFieldBorderColor)),
                     child: Text(
-                      "first",
+                      tittleList[index],
                       style: TextStyle(
                           fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
-                  ),
-                ),
+                  );
+                }),
                 const SizedBox(
                   height: 24,
                 ),

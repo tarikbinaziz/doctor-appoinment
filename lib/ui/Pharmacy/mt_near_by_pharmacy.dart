@@ -34,6 +34,12 @@ class NearByPharmacyScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: GridView.builder(
+                itemCount: 8,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    childAspectRatio: 0.80,
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 6,
+                    mainAxisSpacing: 6),
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                     elevation: 0,
@@ -128,11 +134,7 @@ class NearByPharmacyScreen extends StatelessWidget {
                     ),
                   );
                 },
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    childAspectRatio: 0.80,
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10),
+
               ).onTap(() => PharmacyDetailsScreen().launch(context)),
             ),
           ),

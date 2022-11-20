@@ -30,13 +30,17 @@ class NearByHospitalScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: GridView.builder(
-
+                itemCount: 8,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                   childAspectRatio: 0.637,
+                    crossAxisCount: 2, crossAxisSpacing: 6, mainAxisSpacing: 6),
                 itemBuilder: (BuildContext context, int index) {
                   return Card(
                     elevation: 0,
                     shape: OutlineInputBorder(borderRadius: BorderRadius.circular(10),borderSide: BorderSide.none),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Container(
                           height: 110,
@@ -52,6 +56,7 @@ class NearByHospitalScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(10.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               Text(
                                 " Christ Hospital",
@@ -67,9 +72,12 @@ class NearByHospitalScreen extends StatelessWidget {
                                     color: kMainColor,
                                     size: 16,
                                   ),
-                                  Text(
-                                    "Dhaka Medical, Ba...",
-                                    style: ksubTitleTextStyle,
+                                  Flexible(
+                                    child: Text(
+                                      "Dhaka Medical, Ba...",
+                                      overflow: TextOverflow.ellipsis,
+                                      style: ksubTitleTextStyle,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -125,14 +133,11 @@ class NearByHospitalScreen extends StatelessWidget {
                     ),
                   );
                 },
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  childAspectRatio: 0.67,
-                    crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 10),
-              ),
+
             ),
           ),
         ),
       ),
-    );
+    ));
   }
 }

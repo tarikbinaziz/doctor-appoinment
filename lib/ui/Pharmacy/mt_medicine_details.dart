@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:maan_doctor_appoinment/ui/Cart/mt_cart.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../const/const.dart';
-import '../Home/Doctor Appoinment/mt_patients_details.dart';
 
 class MedicineDetailsScreen extends StatefulWidget {
   const MedicineDetailsScreen({Key? key}) : super(key: key);
@@ -62,12 +60,28 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
               ),
             ),
           ]),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(14.0),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            color:kLikeWhiteColor,
+            boxShadow: [
+              BoxShadow(
+                color: kSubTitleColor.withOpacity(0.4),
+                blurRadius: 1,
+                // Shadow position
+              ),
+            ],
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            )),
+        height: 80,
+        padding: EdgeInsets.all(16),
         child: AppButton(
           text: "View Cart (2)",
           textColor: kLikeWhiteColor,
           elevation: 0,
+          enableScaleAnimation: false,
+          padding: EdgeInsets.zero,
           color: kMainColor,
           onTap: () => CartScreen().launch(context),
           //  padding: EdgeInsets.zero,
@@ -86,7 +100,8 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                     fit: BoxFit.fill)),
           ),
           DraggableScrollableSheet(
-              initialChildSize: 0.60,
+              initialChildSize: 0.61,
+              expand: true,
               builder: (_, index) {
                 return Container(
                   padding: EdgeInsets.all(10),
@@ -214,11 +229,9 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                 );
               }),
           DraggableScrollableSheet(
-            maxChildSize: 1,
-              snap: true,
-            //  expand: false,
-              initialChildSize: 0.37,
-              snapSizes: [0.37,1],
+              maxChildSize: 1,
+              initialChildSize: 0.35,
+              expand: true,
               builder: (_, index) {
                 return Container(
                   padding: EdgeInsets.all(10),
@@ -239,9 +252,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                           "Uses of Napa Extend",
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        trailing: Icon(isExpanded
-                            ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
+                        trailing: Icon(
+                          isExpanded
+                              ? Icons.keyboard_arrow_down
+                              : Icons.keyboard_arrow_right,
+                          color: kSubTitleColor,
+                        ),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -256,7 +272,9 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                     shape: BoxShape.circle,
                                     color: kSubTitleColor),
                               ),
-                              SizedBox(width: 8,),
+                              SizedBox(
+                                width: 8,
+                              ),
                               Text(
                                 "Pain relief",
                                 style: TextStyle(color: kSubTitleColor),
@@ -271,14 +289,15 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                     shape: BoxShape.circle,
                                     color: kSubTitleColor),
                               ),
-                              SizedBox(width: 8,),
+                              SizedBox(
+                                width: 8,
+                              ),
                               Text(
                                 "Fever",
                                 style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
-
                         ],
                       ),
                       ExpansionTile(
@@ -290,9 +309,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                           "Side effects of Napa Extend",
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        trailing: Icon(isExpanded
-                            ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
+                        trailing: Icon(
+                          isExpanded
+                              ? Icons.keyboard_arrow_down
+                              : Icons.keyboard_arrow_right,
+                          color: kSubTitleColor,
+                        ),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -307,15 +329,15 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                     shape: BoxShape.circle,
                                     color: kSubTitleColor),
                               ),
-                              SizedBox(width: 8,),
+                              SizedBox(
+                                width: 8,
+                              ),
                               Text(
                                 "No common side effects seen",
                                 style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
-
-
                         ],
                       ),
                       ExpansionTile(
@@ -327,9 +349,12 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                           "How to use Napa Extend",
                           style: TextStyle(fontWeight: FontWeight.w600),
                         ),
-                        trailing: Icon(isExpanded
-                            ? Icons.keyboard_arrow_down
-                            : Icons.keyboard_arrow_right,color: kSubTitleColor,),
+                        trailing: Icon(
+                          isExpanded
+                              ? Icons.keyboard_arrow_down
+                              : Icons.keyboard_arrow_right,
+                          color: kSubTitleColor,
+                        ),
                         onExpansionChanged: (value) {
                           setState(() {
                             isExpanded = value;
@@ -344,15 +369,15 @@ class _MedicineDetailsScreenState extends State<MedicineDetailsScreen> {
                                     shape: BoxShape.circle,
                                     color: kSubTitleColor),
                               ),
-                              SizedBox(width: 8,),
+                              SizedBox(
+                                width: 8,
+                              ),
                               Text(
                                 napaDetails,
                                 style: TextStyle(color: kSubTitleColor),
                               )
                             ],
                           ),
-
-
                         ],
                       ),
                     ],

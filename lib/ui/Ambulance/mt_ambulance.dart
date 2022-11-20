@@ -26,7 +26,7 @@ class AmbulanceScreen extends StatelessWidget {
       ),
       body: Container(
         decoration: BoxDecoration(
-            color: kContainerBgColor,
+            color: kbigContainerColor,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20),
               topRight: Radius.circular(20),
@@ -155,15 +155,12 @@ class AmbulanceScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Spacer(),
-
-              Padding(
-                padding: const EdgeInsets.only(bottom: 50.0),
+              Expanded(
                 child: Image.asset(
                   "assets/images/all-ambulance.png",
-                  width: double.infinity,
                 ),
-              )
+              ),
+              SizedBox(height: 20,)
             ],
           ),
         ),

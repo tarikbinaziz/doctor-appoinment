@@ -28,7 +28,7 @@ List<DoctorModel> allDoctors = [
   DoctorModel(
     doctorName: 'Dr. Josiah Toor',
     speciality: 'Cancer Specialist',
-    hospital: 'Dhaka Medical, bangladesh',
+    hospital: 'National Institute of Cancer Research & Hospital',
     ratings: '4.4',
     ratingCount: '70',
     experience: '7',

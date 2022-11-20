@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:maan_doctor_appoinment/ui/Cart/mt_shipping_address.dart';
 import 'package:maan_doctor_appoinment/ui/Styles/style.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -219,7 +220,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                               Text(
                                 "Change",
                                 style: TextStyle(color: kBadgeColor),
-                              )
+                              ).onTap(()=>ShippingAddress().launch(context))
                             ],
                           ),
                           const SizedBox(

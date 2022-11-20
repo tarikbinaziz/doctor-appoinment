@@ -1,3 +1,4 @@
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/const/const.dart';
@@ -28,32 +29,27 @@ class _HomeBottomNavBarScreenState extends State<HomeBottomNavBarScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: pages.elementAt(currentIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: kMainColor,
-        unselectedItemColor: kSubTitleColor,
-        type: BottomNavigationBarType.fixed,
-        currentIndex: currentIndex,
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
-        unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w500),
-        onTap: (value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(IconlyBold.home),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-              icon: ImageIcon(AssetImage("assets/icons/pharmacy.png",)), label: "Pharmacy"),
-          BottomNavigationBarItem(icon: Icon(IconlyBold.buy), label: " "),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.document), label: "History"),
-          BottomNavigationBarItem(
-              icon: Icon(IconlyBold.profile), label: "Profile"),
-        ],
-      ),
+      bottomNavigationBar:ConvexAppBar(
+        height: 72,
+        shadowColor: kSubTitleColor.withOpacity(0.1),
+        style: TabStyle.fixedCircle,
+        color: kSubTitleColor,
+          backgroundColor: kLikeWhiteColor,
+          activeColor: kMainColor,
+          onTap: (value) {
+            setState(() {
+              currentIndex = value;
+            });
+          },
+          items: [
+        TabItem(icon: Icon(IconlyBold.home,color: kSubTitleColor,),title: "Home",activeIcon: Icon(IconlyBold.home,color: kMainColor,)),
+        TabItem(icon: ImageIcon(AssetImage("assets/icons/pharmacy.png",),color: kSubTitleColor,),title: "Pharmacy",activeIcon:ImageIcon(AssetImage("assets/icons/pharmacy.png",),color: kMainColor,)),
+        TabItem(icon:  Icon(IconlyBold.buy,color: kTitleColor,),title: "",activeIcon: Icon(IconlyBold.buy,color: kLikeWhiteColor,)),
+        TabItem(icon: Icon(IconlyBold.document,color: kSubTitleColor,),title: "Document",activeIcon:Icon(IconlyBold.document,color: kMainColor,) ),
+        TabItem(icon: Icon(IconlyBold.profile,color: kSubTitleColor,),title: "Profile",activeIcon:Icon(IconlyBold.profile,color: kMainColor,) ),
+
+      ])
+
     );
   }
 }

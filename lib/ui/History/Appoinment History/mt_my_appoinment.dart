@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../../const/const.dart';
 import '../../../model/mt_doctor_model.dart';
 import '../../Styles/style.dart';
@@ -100,7 +98,9 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                       style: TextStyle(
                           fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
-                    SizedBox(height: 12,),
+                    SizedBox(
+                      height: 12,
+                    ),
                     ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
@@ -109,95 +109,110 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                         return Padding(
                           padding: const EdgeInsets.all(6.0),
                           child: Card(
-                            elevation: 0,
-                            margin: EdgeInsets.zero,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                side: BorderSide(
-                                    color: kSubTitleColor.withOpacity(0.10))),
-                            child: Padding(
-                              padding: const EdgeInsets.all(12.0),
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(46),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(8),
-                                        image: DecorationImage(
-                                            image: AssetImage(
-                                                allDoctors[index].image ?? ''),
-                                            fit: BoxFit.fill)),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                              elevation: 0,
+                              margin: EdgeInsets.zero,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10),
+                                  side: BorderSide(
+                                      color: kSubTitleColor.withOpacity(0.10))),
+                              child: Padding(
+                                padding: const EdgeInsets.all(12.0),
+                                child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
-                                      Text(
-                                        allDoctors[index].doctorName ?? '',
-                                        style:
-                                            TextStyle(fontWeight: FontWeight.w600),
+                                      Container(
+                                        padding: EdgeInsets.all(46),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    allDoctors[index].image ??
+                                                        ''),
+                                                fit: BoxFit.fill)),
                                       ),
-                                      SizedBox(height: 4,),
-                                      Text(
-                                        allDoctors[index].speciality ?? '',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            color: kMainColor),
+                                      SizedBox(
+                                        width: 10,
                                       ),
-                                      SizedBox(height: 4,),
-                                      Text(
-                                        "25 May 22 - 10:00 AM",
-                                        style: ksubTitleTextStyle,
-                                      ),
-                                      SizedBox(height: 3,),
-                                      Row(
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          Container(
-                                            padding: EdgeInsets.all(6.0),
-                                            decoration: BoxDecoration(
-                                                color: kMainColor.withOpacity(0.1),
-                                                shape: BoxShape.circle),
-                                            child:  ImageIcon(AssetImage(icons[index]),color: kMainColor,size: 10,)
-
+                                          Text(
+                                            allDoctors[index].doctorName ?? '',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                          SizedBox(
+                                            height: 4,
+                                          ),
+                                          Text(
+                                            allDoctors[index].speciality ?? '',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                color: kMainColor),
+                                          ),
+                                          SizedBox(
+                                            height: 4,
+                                          ),
+                                          Text(
+                                            "25 May 22 - 10:00 AM",
+                                            style: ksubTitleTextStyle,
+                                          ),
+                                          SizedBox(
+                                            height: 3,
+                                          ),
+                                          Row(children: [
+                                            Container(
+                                                padding: EdgeInsets.all(6.0),
+                                                decoration: BoxDecoration(
+                                                    color: kMainColor
+                                                        .withOpacity(0.1),
+                                                    shape: BoxShape.circle),
+                                                child: ImageIcon(
+                                                  AssetImage(icons[index]),
+                                                  color: kMainColor,
+                                                  size: 10,
+                                                )),
+                                            SizedBox(
+                                              width: 6,
                                             ),
-                                          SizedBox(width: 6,),
-                                          RichText(
-                                              text: TextSpan(
-                                                  text: calls[index],
-                                                  style: TextStyle(
-                                                      color: kTitleColor),
-                                                  children: [
-                                                    WidgetSpan(child: SizedBox(width: 6,)),
-                                                    TextSpan(
-                                                      text: conditions[index],
-                                                      style: TextStyle(
-                                                          color: colors[index]),
-                                                    )
-                                                  ])),
+                                            RichText(
+                                                text: TextSpan(
+                                                    text: calls[index],
+                                                    style: TextStyle(
+                                                        color: kTitleColor),
+                                                    children: [
+                                                  WidgetSpan(
+                                                      child: SizedBox(
+                                                    width: 6,
+                                                  )),
+                                                  TextSpan(
+                                                    text: conditions[index],
+                                                    style: TextStyle(
+                                                        color: colors[index]),
+                                                  )
+                                                ])),
                                           ]),
-
-
-
-
-
-                                ],
-
-                              ),
-    ]).onTap(() => DoctorDetailsScreen().launch(context)),
-                            )
-                          ),
-                        );},
+                                        ],
+                                      ),
+                                    ]),
+                              )),
+                        );
+                      },
                     ),
-                    SizedBox(height: 24,),
+                    SizedBox(
+                      height: 24,
+                    ),
                     Text(
                       "Yesterday - 11 July 2022",
                       style: TextStyle(
                           fontWeight: FontWeight.w600, color: kSubTitleColor),
                     ),
-                    SizedBox(height: 12,),
+                    SizedBox(
+                      height: 12,
+                    ),
                     ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
@@ -215,78 +230,90 @@ class _MyAppoinmentScreenState extends State<MyAppoinmentScreen> {
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Container(
                                         padding: EdgeInsets.all(46),
                                         decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(8),
+                                            borderRadius:
+                                                BorderRadius.circular(8),
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    allDoctors[index].image ?? ''),
+                                                    allDoctors[index].image ??
+                                                        ''),
                                                 fit: BoxFit.fill)),
                                       ),
                                       SizedBox(
                                         width: 10,
                                       ),
                                       Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             allDoctors[index].doctorName ?? '',
-                                            style:
-                                            TextStyle(fontWeight: FontWeight.w600),
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w600),
                                           ),
-                                          SizedBox(height: 4,),
+                                          SizedBox(
+                                            height: 4,
+                                          ),
                                           Text(
                                             allDoctors[index].speciality ?? '',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 color: kMainColor),
                                           ),
-                                          SizedBox(height: 4,),
+                                          SizedBox(
+                                            height: 4,
+                                          ),
                                           Text(
                                             "25 May 22 - 10:00 AM",
                                             style: ksubTitleTextStyle,
                                           ),
-                                          SizedBox(height: 3,),
-                                          Row(
-                                              children: [
-                                                Container(
-                                                    padding: EdgeInsets.all(6.0),
-                                                    decoration: BoxDecoration(
-                                                        color: kMainColor.withOpacity(0.1),
-                                                        shape: BoxShape.circle),
-                                                    child:  ImageIcon(AssetImage(icons[index]),color: kMainColor,size: 10,)
-
-                                                ),
-                                                SizedBox(width: 6,),
-                                                RichText(
-                                                    text: TextSpan(
-                                                        text: calls[index],
-                                                        style: TextStyle(
-                                                            color: kTitleColor),
-                                                        children: [
-                                                          WidgetSpan(child: SizedBox(width: 6,)),
-                                                          TextSpan(
-                                                            text: conditions[index],
-                                                            style: TextStyle(
-                                                                color: colors[index]),
-                                                          )
-                                                        ])),
-                                              ]),
-
-
-
-
-
+                                          SizedBox(
+                                            height: 3,
+                                          ),
+                                          Row(children: [
+                                            Container(
+                                                padding: EdgeInsets.all(6.0),
+                                                decoration: BoxDecoration(
+                                                    color: kMainColor
+                                                        .withOpacity(0.1),
+                                                    shape: BoxShape.circle),
+                                                child: ImageIcon(
+                                                  AssetImage(icons[index]),
+                                                  color: kMainColor,
+                                                  size: 10,
+                                                )),
+                                            SizedBox(
+                                              width: 6,
+                                            ),
+                                            RichText(
+                                                text: TextSpan(
+                                                    text: calls[index],
+                                                    style: TextStyle(
+                                                        color: kTitleColor),
+                                                    children: [
+                                                  WidgetSpan(
+                                                      child: SizedBox(
+                                                    width: 6,
+                                                  )),
+                                                  TextSpan(
+                                                    text: conditions[index],
+                                                    style: TextStyle(
+                                                        color: colors[index]),
+                                                  )
+                                                ])),
+                                          ]),
                                         ],
-
                                       ),
-                                    ]).onTap(() => DoctorDetailsScreen().launch(context)),
-                              )
-                          ),
-                        );},
+                                    ]).onTap(() =>
+                                    DoctorDetailsScreen().launch(context)),
+                              )),
+                        );
+                      },
                     ),
                   ],
                 ),

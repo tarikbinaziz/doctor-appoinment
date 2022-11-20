@@ -90,7 +90,7 @@ class _OneDayPackScreenState extends State<OneDayPackScreen> {
         ),
         body: Container(
             decoration: BoxDecoration(
-                color: kContainerBgColor,
+                color: kbigContainerColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),

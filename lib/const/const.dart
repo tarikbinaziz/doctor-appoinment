@@ -37,6 +37,7 @@ Color kFreegeAmbulanceBGColor = const Color(0xFFFFF9EB);
 Color k15DaysBGColor = const Color(0xFF35CDB1);
 Color k30DaysBGColor = const Color(0xFFFF9836);
 Color k0000BlackColor= Color(0xFF000000);
+Color kExcerSizeBannerColor= Color(0xFF4AC8FF);
 
 InputDecoration otpInputDecoration = InputDecoration(
   contentPadding: const EdgeInsets.symmetric(vertical: 5),
@@ -61,3 +62,4 @@ String pac1="Nurse will be present in the workplace on time.";
 String pac2="Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Felis volutpat dictumst";
 String pac3="pellentesque enim, libero augue sed. Sagittis ult rices quisque purus id euismod diam orci cura bitur sodales Et sollicitudin";
 String pac4="Lorem ipsum dolor sit amet, consectetur adipisc ing elit. Felis volutpat dictumst";
+String aboutUsdetails="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec tincidunt lectus turpis feugiat amet, nibh. Mauris mattis aliquam et, amet, consequat vulputate. Est condimentum a ut condime Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec tincidunt lectus turpis feugiat amet, nibh. Mauris mattis aliquam et, amet, consequat vulputate. Est condimentum a ut condime";

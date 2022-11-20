@@ -55,6 +55,7 @@ class _CartScreenState extends State<CartScreen> {
           child: AppButton(
             text: "check Out",
             textColor: kLikeWhiteColor,
+            enableScaleAnimation: false,
             elevation: 0,
             color: kMainColor,
             onTap: () => CheckOutScreen().launch(context),
@@ -203,6 +204,7 @@ class _CartScreenState extends State<CartScreen> {
           DraggableScrollableSheet(
               initialChildSize: 0.7,
              maxChildSize: 0.7,
+              minChildSize: 0.7,
               builder:
                   (BuildContext context, ScrollController scrollController) {
                 return Container(

@@ -3,7 +3,6 @@ import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:maan_doctor_appoinment/ui/Diagnostics/mt_diagnostics_details.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_near_by_pharmacy.dart';
 import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_pharmacy_categories.dart';
-import 'package:maan_doctor_appoinment/ui/Pharmacy/mt_upload_prescription.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../const/const.dart';
 import '../Styles/style.dart';
@@ -227,7 +226,7 @@ class _DiagnosticsScreenState extends State<DiagnosticsScreen> {
                         Text(
                           "View All",
                           style: ksubTitleTextStyle,
-                        ).onTap(() => NearByPharmacyScreen().launch(context)),
+                        ).onTap(() => DiagnosticsDetailsScreen().launch(context)),
                       ],
                     ),
                     const SizedBox(
